@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../photointegrationparking/s.gif</file>
+        <file>../../../../photoparking/voiture.png</file>
+        <file>../photointegrationparking/gif.gif</file>
+        <file>choisir.png</file>
+        <file>choisiradminclient.png</file>
+        <file>gererzone.png</file>
+        <file>gif.gif</file>
+        <file>s.gif</file>
+        <file>Sans-titre-1.gif</file>
+    </qresource>
+</RCC>

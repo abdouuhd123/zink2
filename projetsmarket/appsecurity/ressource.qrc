@@ -1,0 +1,42 @@
+<RCC>
+    <qresource prefix="/">
+        <file>interface/11.png</file>
+        <file>interface/Acc.png</file>
+        <file>interface/accident.png</file>
+        <file>interface/advancedre.png</file>
+        <file>interface/alarmbutton.png</file>
+        <file>interface/beyaaa.png</file>
+        <file>interface/Blocc.png</file>
+        <file>interface/blocs.png</file>
+        <file>interface/close.png</file>
+        <file>interface/Employ.png</file>
+        <file>interface/employee.png</file>
+        <file>interface/fire.png</file>
+        <file>interface/fond 1.png</file>
+        <file>interface/fond 2.png</file>
+        <file>interface/interface 2.png</file>
+        <file>interface/menu.png</file>
+        <file>interface/modifie button.png</file>
+        <file>interface/mouvement.png</file>
+        <file>interface/normal sound.mp3</file>
+        <file>interface/rgetg.png</file>
+        <file>interface/siren.mp3</file>
+        <file>interface/sound no.mp3</file>
+        <file>interface/stopalarm.png</file>
+        <file>interface/the real interface.png</file>
+        <file>interface/theft.png</file>
+        <file>interface/ughhh.png</file>
+        <file>interface/Untitled-1.png</file>
+        <file>interface/Untitled-1gff.png</file>
+        <file>interface/Untitled-1jygygyu.png</file>
+        <file>interface/Untitled-11.png</file>
+        <file>interface/Untitled-22.png</file>
+        <file>interface/Untitled-33.png</file>
+        <file>interface/Untitled-44.png</file>
+        <file>interface/Untitled-111.png</file>
+        <file>interface/Untitled-11111.png</file>
+        <file>interface/Untitled-zrf.png</file>
+        <file>interface/vish.jpg</file>
+        <file>interface/yas.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,2842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>parking</class>
+ <widget class="QMainWindow" name="parking">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>516</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>parking</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>851</width>
+      <height>451</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="page_">
+     <widget class="QPushButton" name="pushButton_5">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>190</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_zone">
+     <widget class="QStackedWidget" name="stackedWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>831</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QWidget" name="page">
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>380</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>retour</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>801</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+background-image: url(:/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_supprimer">
+        <property name="geometry">
+         <rect>
+          <x>164</x>
+          <y>322</y>
+          <width>101</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_modifier">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>382</y>
+          <width>75</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_ajouter">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>250</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_afficher">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>162</y>
+          <width>91</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <zorder>label</zorder>
+       <zorder>pushButton_supprimer</zorder>
+       <zorder>pushButton_modifier</zorder>
+       <zorder>pushButton_ajouter</zorder>
+       <zorder>pushButton_afficher</zorder>
+       <zorder>pushButton</zorder>
+      </widget>
+      <widget class="QWidget" name="afficheretchercher">
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>2</y>
+          <width>801</width>
+          <height>451</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ajouter">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>230</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="supprimer_3">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>300</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifier">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>360</y>
+          <width>75</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tablzone">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>40</y>
+          <width>391</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 14pt &quot;Bahnschrift&quot;;
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+
+
+background-color: rgb(4, 44, 89);
+color:  rgb(179, 179, 193);</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retour">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>380</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#retour{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#retour:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_affichz">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>120</y>
+          <width>151</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_affichz{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton_affichz:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>afficher zone :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="chercherplace">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>180</y>
+          <width>171</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#chercherplace{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#chercherplace:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>chercher place :</string>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tableView_2">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>40</y>
+          <width>401</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 14pt &quot;Bahnschrift&quot;;
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+
+
+background-color: rgb(4, 44, 89);
+color:  rgb(179, 179, 193);</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_cherche">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>310</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_cherche{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_cherhce:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_numz">
+        <property name="geometry">
+         <rect>
+          <x>426</x>
+          <y>310</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>Numero :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="test">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>60</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_31">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>22</y>
+          <width>31</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ETAT </string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>22</y>
+          <width>81</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ajouterzone_2">
+       <widget class="QPushButton" name="afficher">
+        <property name="geometry">
+         <rect>
+          <x>60</x>
+          <y>150</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>2</y>
+          <width>811</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="supprimer_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>300</y>
+          <width>71</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifier_2">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>360</y>
+          <width>71</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="confirmerajouterzone">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>350</y>
+          <width>121</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#confirmerajouterzone{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#confirmerajouterzone:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_numzoneaajouter">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>150</y>
+          <width>151</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>NumeroZone :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_etat">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>210</y>
+          <width>61</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>Etat :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_nombreplace">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>260</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Segoe UI Historic&quot;;
+color: rgb(179, 179, 193);
+
+</string>
+        </property>
+        <property name="text">
+         <string>NombrePlace :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_numzone">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>160</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_numzone{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_numzone:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_etat">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>210</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_etat{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_etat:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_nombreplace">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>270</y>
+          <width>113</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_nombreplace{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_nombreplace:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>60</y>
+          <width>231</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 24pt &quot;MS Shell Dlg 2&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Ajouterrr</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>370</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_2{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton_2:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>retour</string>
+        </property>
+       </widget>
+       <zorder>label_2</zorder>
+       <zorder>afficher</zorder>
+       <zorder>supprimer_2</zorder>
+       <zorder>modifier_2</zorder>
+       <zorder>confirmerajouterzone</zorder>
+       <zorder>label_numzoneaajouter</zorder>
+       <zorder>label_etat</zorder>
+       <zorder>label_nombreplace</zorder>
+       <zorder>lineEdit_numzone</zorder>
+       <zorder>lineEdit_etat</zorder>
+       <zorder>lineEdit_nombreplace</zorder>
+       <zorder>label_18</zorder>
+       <zorder>pushButton_2</zorder>
+      </widget>
+      <widget class="QWidget" name="supprimerzone">
+       <widget class="QPushButton" name="modifierzone">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>350</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>0</y>
+          <width>811</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="afficherrecherchezone">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>150</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="boutonajouter">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>230</y>
+          <width>81</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_suppzone">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>220</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_suppzone{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_suppzone:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>215</y>
+          <width>111</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>Numero :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_suppzone">
+        <property name="geometry">
+         <rect>
+          <x>564</x>
+          <y>310</y>
+          <width>131</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_suppzone{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton_suppzone:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Supprimer</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retour_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>380</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#retour_2{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#retour_2:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+       <zorder>label_3</zorder>
+       <zorder>modifierzone</zorder>
+       <zorder>afficherrecherchezone</zorder>
+       <zorder>boutonajouter</zorder>
+       <zorder>lineEdit_suppzone</zorder>
+       <zorder>label_13</zorder>
+       <zorder>pushButton_suppzone</zorder>
+       <zorder>retour_2</zorder>
+      </widget>
+      <widget class="QWidget" name="modifierzone_2">
+       <widget class="QLabel" name="label_4">
+        <property name="geometry">
+         <rect>
+          <x>6</x>
+          <y>2</y>
+          <width>831</width>
+          <height>451</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="supprimer">
+        <property name="geometry">
+         <rect>
+          <x>180</x>
+          <y>300</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ajouterzone">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>230</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="afficherrecherche">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>150</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifier_3">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>300</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#modifier_3{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#modifier_3:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>modifier</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_11">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>190</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>Numero :</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>240</y>
+          <width>161</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>Nombreplace :</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_num">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>190</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_num{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_num:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_nom">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>250</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_nom{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_nom:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retour_3">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>380</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#retour_3{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#retour_3:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_choisirclientadmin">
+     <widget class="QLabel" name="label_choisirclientadmin">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>861</width>
+        <height>441</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/choisiradminclient.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_admin">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>262</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_admin{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton_admin:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Admin</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_client">
+      <property name="geometry">
+       <rect>
+        <x>600</x>
+        <y>262</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_client{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton_client:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Client</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>60</y>
+        <width>161</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_17">
+      <property name="geometry">
+       <rect>
+        <x>606</x>
+        <y>52</y>
+        <width>161</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_choisirclientadmin</zorder>
+     <zorder>pushButton_admin</zorder>
+     <zorder>pushButton_client</zorder>
+     <zorder>label_17</zorder>
+     <zorder>label_16</zorder>
+    </widget>
+    <widget class="QWidget" name="page_mp">
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>530</x>
+        <y>330</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#pushButton_3{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton_3:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Confirmer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_20">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>10</y>
+        <width>821</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(179, 179, 193);
+
+color: rgb(0, 0, 127);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_21">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>50</y>
+        <width>121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(4, 40, 80);
+font: 36pt &quot;Bahnschrift&quot;;
+
+</string>
+      </property>
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_identifiant">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>160</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#lineEdit_identifiant{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_identifiant:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_mp">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>250</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#lineEdit_mp{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_mp:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_22">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>160</y>
+        <width>101</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(41, 44, 51);
+font: 14pt &quot;Arial&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Identifiant :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>250</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(41, 44, 51);
+font: 14pt &quot;Arial&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Mot de passe :</string>
+      </property>
+     </widget>
+     <zorder>label_20</zorder>
+     <zorder>label_21</zorder>
+     <zorder>lineEdit_identifiant</zorder>
+     <zorder>lineEdit_mp</zorder>
+     <zorder>label_22</zorder>
+     <zorder>label_23</zorder>
+     <zorder>pushButton_3</zorder>
+    </widget>
+    <widget class="QWidget" name="page_choisirzoneplace">
+     <widget class="QPushButton" name="pushButton_4">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>100</y>
+        <width>371</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>choisirplacezone</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="place">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>270</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#place{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#place:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Place</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="zone">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>150</y>
+        <width>131</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#zone{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#zone:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Zone</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_19">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>811</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-image: url(:/choisir.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="verifier">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>40</y>
+        <width>131</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#verifier{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#verifier:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>verifier</string>
+      </property>
+     </widget>
+     <zorder>pushButton_4</zorder>
+     <zorder>label_19</zorder>
+     <zorder>place</zorder>
+     <zorder>zone</zorder>
+     <zorder>verifier</zorder>
+    </widget>
+    <widget class="QWidget" name="page_place">
+     <widget class="QStackedWidget" name="gererplace_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>0</y>
+        <width>811</width>
+        <height>431</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QWidget" name="gererplace">
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>0</y>
+          <width>821</width>
+          <height>421</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ajouterplace">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>230</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifierplace">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>370</y>
+          <width>75</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="supprimer_4">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>310</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="afficher_2">
+        <property name="geometry">
+         <rect>
+          <x>14</x>
+          <y>160</y>
+          <width>91</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retour_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>380</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#retour_5{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#retour_5:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="modifierplace_5">
+       <widget class="QLabel" name="label_9">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>0</y>
+          <width>821</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="supprimerplace_4">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>300</y>
+          <width>75</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ajouterplace_5">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>230</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="afficherplace_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>152</y>
+          <width>75</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_confirmermodification">
+        <property name="geometry">
+         <rect>
+          <x>510</x>
+          <y>340</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_confirmermodification{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton_confirmermodification:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>modifier</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_numplace">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>220</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_numplace{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_numplace:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_etatmodifier">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>280</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_etatmodifier{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_etatmodifier:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>236</x>
+          <y>220</y>
+          <width>131</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);
+</string>
+        </property>
+        <property name="text">
+         <string>Numero:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>280</y>
+          <width>101</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>Etat:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retour_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>370</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#retour_6{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#retour_6:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="afficherplace_3">
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>-10</x>
+          <y>20</y>
+          <width>831</width>
+          <height>411</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifierplace_4">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>382</y>
+          <width>75</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ajouterplace_4">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>250</y>
+          <width>75</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="supprimerplace_3">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>320</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QTableView" name="tableView">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>50</y>
+          <width>491</width>
+          <height>321</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 14pt &quot;Bahnschrift&quot;;
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+
+
+background-color: rgb(4, 44, 89);
+color:  rgb(179, 179, 193);</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retour_7">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>380</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#retour_7{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#retour_7:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="test2">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>90</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="ajouterplace_3">
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>0</y>
+          <width>781</width>
+          <height>441</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifierplace_2">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>360</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="supprimerplace">
+        <property name="geometry">
+         <rect>
+          <x>190</x>
+          <y>300</y>
+          <width>75</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="afficherplace">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>152</y>
+          <width>75</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="confirmerajout">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>320</y>
+          <width>141</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#confirmerajout{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#confirmerajout:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>ajouter</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="numeroaajouter">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>140</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#numeroaajoute{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#numeroaajouter:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="choisirzone">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>260</y>
+          <width>111</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#choisirzone:hover{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#choisirzone{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="numplace">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>140</y>
+          <width>131</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>Numero:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="etatplacelabel">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>200</y>
+          <width>111</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>EtatPlace:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="choisirzonelabel">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>260</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>Choisir Zone:</string>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="comboBox_etat">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>200</y>
+          <width>111</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#comboBox_etat:hover{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#comboBox_etat{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retour_8">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>372</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#retour_8{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#retour_8:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="supprimerplace_2">
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>0</y>
+          <width>781</width>
+          <height>431</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-image: url(:/photointegrationparking/gererzone.png);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="ajouterplace_2">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>220</y>
+          <width>91</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="modifierplace_3">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>360</y>
+          <width>75</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="afficherplace_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>150</y>
+          <width>81</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: transparent;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_supprimer">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>110</y>
+          <width>161</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 18pt &quot;Arial&quot;;
+color: rgb(179, 179, 193);</string>
+        </property>
+        <property name="text">
+         <string>NumeroPlace:</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_confirmersupprimer">
+        <property name="geometry">
+         <rect>
+          <x>560</x>
+          <y>190</y>
+          <width>111</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_confirmersupprimer{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton_confirmersupprimere:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>supprimer</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit_numplaceasupprimer">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>120</y>
+          <width>113</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#lineEdit_numplaceasupprimer{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit_numplaceasupprimre:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="retour_4">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>370</y>
+          <width>75</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#retour_4{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#retour_4:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_choisirzone">
+     <widget class="QPushButton" name="ok">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>320</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#ok{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#ok:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Ok</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_choisirplace">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>841</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(179, 179, 193);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="Retour">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>360</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>210</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#comboBox:hover{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#comboBox{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="bienvenue">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>30</y>
+        <width>391</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(41, 44, 51);
+font: 48pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Bienvenue</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_25">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>190</y>
+        <width>211</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 24pt &quot;Bahnschrift&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Choisir La zone </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_26">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>230</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 24pt &quot;Bahnschrift&quot;;</string>
+      </property>
+      <property name="text">
+       <string>la Plus proche :</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>260</y>
+        <width>151</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#comboBox_2:hover{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#comboBox_2{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="confirmer">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>320</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#confirmer{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#confirmer:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Confirmer</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_27">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>210</y>
+        <width>201</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 24pt &quot;Bahnschrift&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Choisir Place :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_voiture1">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>160</y>
+        <width>71</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>680</x>
+        <y>210</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_28">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>150</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_29">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>150</y>
+        <width>47</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_30">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>20</y>
+        <width>151</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/photoparking/voiture.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>label_choisirplace</zorder>
+     <zorder>ok</zorder>
+     <zorder>Retour</zorder>
+     <zorder>bienvenue</zorder>
+     <zorder>label_25</zorder>
+     <zorder>label_26</zorder>
+     <zorder>comboBox_2</zorder>
+     <zorder>confirmer</zorder>
+     <zorder>label_27</zorder>
+     <zorder>label_voiture1</zorder>
+     <zorder>comboBox</zorder>
+     <zorder>label_24</zorder>
+     <zorder>label_28</zorder>
+     <zorder>label_29</zorder>
+     <zorder>label_30</zorder>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>928</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

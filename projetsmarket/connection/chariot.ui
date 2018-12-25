@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>chariot</class>
+ <widget class="QDialog" name="chariot">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1254</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLineEdit" name="lineEdit_reference">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>310</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>280</y>
+     <width>61</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>num_chariot</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>310</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>reference</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>260</y>
+     <width>501</width>
+     <height>231</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>540</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:transparent;
+border:transparent;
+QPushButton{
+background:rgba(255,255,255,0);
+border-radius:8px;
+}
+QPushButton::hover{
+background:rgba(0,0,0,85);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>550</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:transparent;
+border:transparent;
+QPushButton{
+background:rgba(255,255,255,0);
+border-radius:8px;
+}
+QPushButton::hover{
+background:rgba(0,0,0,85);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_active">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>340</y>
+     <width>82</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Active</string>
+   </property>
+  </widget>
+  <widget class="QRadioButton" name="radioButton_nonactive">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>340</y>
+     <width>82</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Non active</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>340</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Etat</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>400</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Heure</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_heure">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>390</y>
+     <width>111</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_etat">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>360</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_tri">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>80</y>
+     <width>41</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 24pt &quot;DEAR Daddy PERSONAL USE&quot;;
+	font: 18pt &quot;DEAR Daddy PERSONAL USE&quot;;
+background:rgba(255,255,255,0);
+border-radius:8px;
+}
+QPushButton::hover{
+background:rgba(0,0,0,85);
+}</string>
+   </property>
+   <property name="text">
+    <string>tri</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_statistique">
+   <property name="geometry">
+    <rect>
+     <x>1090</x>
+     <y>80</y>
+     <width>151</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 18pt &quot;MS Shell Dlg 2&quot;;
+	font: 20pt &quot;DEAR Daddy PERSONAL USE&quot;;
+background:rgba(255,255,255,0);
+border-radius:8px;
+}
+QPushButton::hover{
+background:rgba(0,0,0,85);
+}</string>
+   </property>
+   <property name="text">
+    <string>Statistique</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>800</x>
+     <y>80</y>
+     <width>101</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 75 11pt &quot;MS Shell Dlg 2&quot;;
+	font: 24pt &quot;DEAR Daddy PERSONAL USE&quot;;
+	font: 18pt &quot;DEAR Daddy PERSONAL USE&quot;;
+	font: 22pt &quot;DEAR Daddy PERSONAL USE&quot;;
+background:rgba(255,255,255,0);
+border-radius:8px;
+}
+QPushButton::hover{
+background:rgba(0,0,0,85);
+}</string>
+   </property>
+   <property name="text">
+    <string>Rechercher</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_recherche">
+   <property name="geometry">
+    <rect>
+     <x>880</x>
+     <y>80</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_modifier">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>540</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:transparent;
+border:transparent;
+QPushButton{
+background:rgba(255,255,255,0);
+border-radius:8px;
+}
+QPushButton::hover{
+background:rgba(0,0,0,85);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_effectuer">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>430</y>
+     <width>121</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	font: 18pt &quot;DEAR Daddy PERSONAL USE&quot;;
+background:rgba(255,255,255,0);
+border-radius:8px;
+}
+QPushButton::hover{
+background:rgba(0,0,0,85);
+}</string>
+   </property>
+   <property name="text">
+    <string>effectuer</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>1261</width>
+     <height>591</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="ressources.qrc">:/new/prefix1/gererchariot.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_retour">
+   <property name="geometry">
+    <rect>
+     <x>1170</x>
+     <y>570</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:transparent;
+border:transparent;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="beya">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>280</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>label_6</zorder>
+  <zorder>lineEdit_reference</zorder>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>tableView</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>radioButton_active</zorder>
+  <zorder>radioButton_nonactive</zorder>
+  <zorder>label_3</zorder>
+  <zorder>label_4</zorder>
+  <zorder>lineEdit_heure</zorder>
+  <zorder>lineEdit_etat</zorder>
+  <zorder>pushButton_tri</zorder>
+  <zorder>pushButton_statistique</zorder>
+  <zorder>label_5</zorder>
+  <zorder>lineEdit_recherche</zorder>
+  <zorder>pushButton_modifier</zorder>
+  <zorder>pushButton_effectuer</zorder>
+  <zorder>pushButton_retour</zorder>
+  <zorder>beya</zorder>
+ </widget>
+ <resources>
+  <include location="ressources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
