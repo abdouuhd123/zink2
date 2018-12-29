@@ -27,7 +27,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page_">
      <widget class="QPushButton" name="pushButton_5">
@@ -3454,8 +3454,8 @@ color:  rgb(179, 179, 193);</string>
        <widget class="QPushButton" name="test2">
         <property name="geometry">
          <rect>
-          <x>130</x>
-          <y>90</y>
+          <x>220</x>
+          <y>120</y>
           <width>75</width>
           <height>23</height>
          </rect>
@@ -3996,8 +3996,8 @@ background-color: rgb(179, 179, 193);</string>
      <widget class="QPushButton" name="Retour">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>560</y>
+        <x>150</x>
+        <y>530</y>
         <width>121</width>
         <height>31</height>
        </rect>
@@ -4183,6 +4183,10 @@ background-color: rgb(255, 255, 255);
         <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4196,6 +4200,10 @@ background-color: rgb(255, 255, 255);
         <height>21</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4203,11 +4211,15 @@ background-color: rgb(255, 255, 255);
      <widget class="QLabel" name="label_29">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>270</x>
         <y>270</y>
         <width>81</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
        <string/>
@@ -4323,6 +4335,10 @@ background-image: url(:/Documents/projetsmarket/voiture2.png);</string>
         <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4336,6 +4352,10 @@ background-image: url(:/Documents/projetsmarket/voiture2.png);</string>
         <height>31</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+      </property>
       <property name="text">
        <string/>
       </property>
@@ -4343,11 +4363,15 @@ background-image: url(:/Documents/projetsmarket/voiture2.png);</string>
      <widget class="QLabel" name="label_41">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>360</y>
-        <width>91</width>
-        <height>31</height>
+        <x>70</x>
+        <y>350</y>
+        <width>121</width>
+        <height>41</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
       </property>
       <property name="text">
        <string/>
@@ -4367,6 +4391,72 @@ background-image: url(:/Documents/projetsmarket/voiture2.png);</string>
       </property>
       <property name="text">
        <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="arduino">
+      <property name="geometry">
+       <rect>
+        <x>670</x>
+        <y>390</y>
+        <width>151</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#arduino{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#arduino:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Arduino</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="confirmera">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>290</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#confirmera{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#confirmer:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+      <property name="text">
+       <string>Confirmera</string>
       </property>
      </widget>
      <zorder>label_choisirplace</zorder>
@@ -4393,6 +4483,8 @@ background-image: url(:/Documents/projetsmarket/voiture2.png);</string>
      <zorder>label_39</zorder>
      <zorder>label_24</zorder>
      <zorder>label_38</zorder>
+     <zorder>arduino</zorder>
+     <zorder>confirmera</zorder>
     </widget>
    </widget>
    <widget class="QLabel" name="label">

@@ -39,7 +39,8 @@ parking::parking(QWidget *parent) :
     sound3->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/place.mp3"));
     sound4= new QMediaPlayer;
     sound4->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/sound.mp3"));
-
+ ui->arduino->setVisible(true);
+ ui->confirmera->setVisible(false);
 
       ui->pushButton_afficher->setToolTip("afficher la zone<font color='blue'>");
       ui->pushButton_ajouter->setToolTip("ajouter une zone ");
@@ -621,7 +622,9 @@ void parking::on_Retour_clicked()
 
 void parking::on_ok_clicked()
 {     sound3->play();
+       ui->arduino->setVisible(false);
       ui->label_choisirplace->setVisible(false);
+         ui->arduino->setVisible(false);
       ui->label_placedispo->setVisible (true);
       ui->ok->setVisible(false);
       ui->label_25->setVisible(false);
@@ -633,7 +636,7 @@ void parking::on_ok_clicked()
       ui->confirmer->setVisible(true);
        //ui->label_4->setVisible(true);
       ui->bienvenue->setVisible(false);
-      ui->label_voiture1->setVisible(true);
+      ui->label_voiture1->setVisible(false);
       ui->label_24->setVisible(true);
 
       ui->label_28->setVisible(true);
@@ -651,7 +654,12 @@ void parking::on_ok_clicked()
       {    int i=0;
                while(qry4.next())
                {   int n =0;
+
+
                    QString numero = qry4.value(0).toString();
+
+
+
                    QSqlQuery qry3;
                    qry3.prepare("select * from PLACE where NUMP = '"+numero+"'");
 
@@ -661,67 +669,29 @@ void parking::on_ok_clicked()
                    i+=qry4.value(1).toInt();
 
                    if(i==0)
-                     {   ui->label_24->setText(qry4.value(0).toString());
-                       ui->label_voiture1->setVisible(false);
-                       ui->label_37->setVisible(false);
-                       ui->label_36->setVisible(false);
-                       ui->label_35->setVisible(false);
-                       ui->label_4->setVisible(false);
-                       ui->label_38->setVisible(false);
+                       ui->label_24->setText(qry4.value(0).toString());
 
-                     }
 
                       if(i==1)
-                        {  ui->label_29->setText(qry4.value(0).toString());
-                           /*ui->label_24->setText(qry4.value(0).toString());*/
-                                                 ui->label_voiture1->setVisible(false);
-                                                 ui->label_37->setVisible(true);
-                                                 ui->label_36->setVisible(false);
-                                                 ui->label_35->setVisible(false);
-                                                 ui->label_4->setVisible(false);
-                                                 ui->label_38->setVisible(false);
+                         ui->label_29->setText(qry4.value(0).toString());
 
 
-                      }
                        if(i==2)
-                        { ui->label_28->setText(qry4.value(0).toString());
+                        ui->label_28->setText(qry4.value(0).toString());
 
-                                                  ui->label_voiture1->setVisible(false);
-                                                  ui->label_37->setVisible(false);
-                                                  ui->label_36->setVisible(false);
-                                                  ui->label_35->setVisible(false);
-                                                  ui->label_4->setVisible(true);
-                                                  ui->label_38->setVisible(true);
-                          }
+
                    if(i==3)
-                      {    ui->label_41->setText(qry4.value(0).toString());
-
-
-
-                   }
+                         ui->label_41->setText(qry4.value(0).toString());
 
                   if(i==4)
-                 {    ui->label_40->setText(qry4.value(0).toString());
+                    ui->label_40->setText(qry4.value(0).toString());
 
-                                             ui->label_voiture1->setVisible(false);
-                                             ui->label_37->setVisible(false);
-                                             ui->label_36->setVisible(true);
-                                             ui->label_35->setVisible(true);
-                                             ui->label_4->setVisible(true);
-                                             ui->label_38->setVisible(true);
 
-                  }
+
                      if(i==5)
-                       {    ui->label_39->setText(qry4.value(0).toString());
+                          ui->label_39->setText(qry4.value(0).toString());
 
-                                                ui->label_voiture1->setVisible(false);
-                                                ui->label_37->setVisible(false);
-                                                ui->label_36->setVisible(false);
-                                                ui->label_35->setVisible(false);
-                                                ui->label_4->setVisible(false);
-                                                ui->label_38->setVisible(false);
 
-                     }
 
 i++;
 
@@ -748,8 +718,13 @@ i++;
            }
  /*************************************************************************/
 
-}
 
+
+
+
+
+
+}
 
 void parking::on_confirmer_clicked()
 {  sound4->play();
@@ -821,17 +796,20 @@ void parking::on_test2_clicked()
      int etat,i=1;
 
     QString a=A.read_from_arduino();
-    A.write_to_arduino("v");
+
     qDebug()  <<"ARDUINO :"<< a;
        if(a=="1\r\n")
-    {         //etat=1;
-            Place  p(5,1);
+    {
+           QSqlQuery qry;
+           qry.prepare("UPDATE PLACE SET etat=1 where nump=100");
+           qry.exec();
+            Place  p(100,1);
 
            p.modifierplace(5);
     }
        else if(a=="0\r\n")
       {  etat=0;
-         Place p(5,0);
+         Place p(100,0);
 
          p.modifierplace(5);
 
@@ -869,4 +847,100 @@ void parking::on_pushButton_afficher_clicked()
 {
     sound4->play();
      ui->stackedWidget_2->setCurrentIndex(1);
+}
+
+void parking::on_arduino_clicked()
+{
+    ui->ok->setVisible(false);
+    ui->confirmer->setVisible(true);
+    ui->label_placedispo->setVisible (true);
+   ui->label_25->setVisible(false);
+    ui->label_26->setVisible(false);
+    ui->comboBox->setVisible(false);
+    ui->comboBox_2->setVisible(true);
+    ui->confirmer->setVisible(true);
+    ui->label_39->setVisible(true);
+    ui->label_30->setVisible(true);
+     ui->label_29->setVisible(true);
+      ui->label_40->setVisible(true);
+
+
+
+
+    QSqlQuery qry4;
+    qry4.prepare("select * from place where numero =6");
+      if(qry4.exec())
+        {
+                 while(qry4.next())
+                 {   int n =0;
+
+
+                     QString numero = qry4.value(0).toString();
+
+                     int i=0; i+=qry4.value(1).toInt();
+
+                      if(i==0)
+                          ui->label_29->setText(qry4.value(0).toString());
+
+
+                         else
+                           ui->label_40->setText(qry4.value(0).toString());
+
+                     QSqlQuery qry3;
+                     qry3.prepare("select * from PLACE where NUMP = '"+numero+"'");
+
+
+
+                      n+= qry3.value(1).toInt();
+
+
+                     qDebug()<<"fgh";
+                     if(qry3.exec())
+                     {
+                         while(qry3.next())
+                         {
+                             n+= qry3.value(1).toInt();
+                             qDebug()<<QString::number(n);
+
+                         }
+                         qDebug()<<"fgh";
+                           if(n ==0)
+                          {   ui->comboBox_2->addItem(numero);
+
+
+                        }
+
+                     }
+
+
+i++;
+
+
+                 }
+                 qDebug()<<"fgh";
+             }
+
+
+
+}
+
+void parking::on_confirmera_clicked()
+{
+    sound4->play();
+       QString zone = "6";
+        QString place = ui->comboBox_2->currentText();
+        QString zonechoisi = "La Zone Choisi Est : ";
+        QString z = zonechoisi+zone;
+        QString placechoisi = "La Place Choisi Est : ";
+       QString p = placechoisi+place;
+         notifyIcon=new QSystemTrayIcon(this);
+         notifyIcon->setIcon(QIcon("C:/photoparking/module.png"));
+         notifyIcon->show();
+         QString titre=ui->comboBox_2->currentText();
+         notifyIcon->showMessage(z,p);
+         int Numero= ui->comboBox_2->currentText().toInt();
+         int etat= 1;
+           Place p2(Numero,etat);
+           ui->tableView->setModel(tmpplace.afficher());
+           A.write_to_arduino("v");
 }

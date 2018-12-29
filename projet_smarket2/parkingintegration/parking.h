@@ -182,6 +182,10 @@ private slots:
 
     void on_pushButton_afficher_clicked();
 
+    void on_arduino_clicked();
+
+    void on_confirmera_clicked();
+
 private:
     Ui::parking *ui;
     Zone tmpzone;
