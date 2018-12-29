@@ -3469,12 +3469,32 @@ color:  rgb(179, 179, 193);</string>
          <rect>
           <x>800</x>
           <y>500</y>
-          <width>75</width>
-          <height>23</height>
+          <width>131</width>
+          <height>41</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">#filtrer{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#filtrer:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+        </property>
         <property name="text">
-         <string>Filtrer</string>
+         <string>Trier</string>
         </property>
        </widget>
       </widget>

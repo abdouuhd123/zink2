@@ -118,7 +118,7 @@ QSqlQueryModel *model=new QSqlQueryModel();
 QSqlQueryModel *Place::tri_par_numero()
 {
     QSqlQueryModel *model=new QSqlQueryModel();
-    model->setQuery("select * from PLACE order by NUMERO ");
+    model->setQuery("select * from PLACE order by NUMP ");
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUMERO"));
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUMP"));
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("ETAT"));
@@ -128,7 +128,7 @@ QSqlQueryModel *Place::tri_par_numero()
 void Place::selectionner(int numero)
 {
     QSqlQuery qry;
-    qry.prepare("select * from produit where PLACE= ?");
+    qry.prepare("select * from PLACE where NUMERO= ?");
     qry.addBindValue(numero);
     if(qry.exec())
     {

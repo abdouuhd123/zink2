@@ -217,7 +217,7 @@ void parking::on_pushButton_admin_clicked()
 
 
 void parking::on_pushButton_ajouter_clicked()
-{   sound4->play();
+{     sound4->play();
      ui->stackedWidget_2->setCurrentIndex(2);
 }
 
@@ -241,12 +241,12 @@ void parking::on_pushButton_supprimer_clicked()
 }
 
 void parking::on_supprimer_2_clicked()
-{
+{sound4->play();
     ui->stackedWidget_2->setCurrentIndex(3);
 }
 
 void parking::on_supprimer_clicked()
-{
+{   sound4->play();
     ui->stackedWidget_2->setCurrentIndex(3);
 }
 
@@ -256,12 +256,12 @@ void parking::on_pushButton_modifier_clicked()
 }
 
 void parking::on_modifierzone_clicked()
-{
+{sound4->play();
     ui->stackedWidget_2->setCurrentIndex(4);
 }
 
 void parking::on_ajouterzone_2_clicked()
-{
+{sound4->play();
     ui->stackedWidget_2->setCurrentIndex(5);
 }
 
