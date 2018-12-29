@@ -23,7 +23,7 @@ parking::parking(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
+/************************connexion arduino*******************************************/
     int ret=A.connect_arduino(); // lancer la connexion Ã  arduino
     switch(ret){
     case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
@@ -31,60 +31,73 @@ parking::parking(QWidget *parent) :
     case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
        break;
     case(-1):qDebug() << "arduino is not available";
-}
+               }
+/***************************ajouter sound***********************************************/
     sound= new QMediaPlayer;
     sound->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/bienvenue.mp3"));
     sound3= new QMediaPlayer;
     sound3->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/place.mp3"));
-
     sound4= new QMediaPlayer;
     sound4->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/sound.mp3"));
 
-  /* mMediaPlayer =new QMediaPlayer(this);
-   mMe                                                             xcxsiaPlayer->play();*/
-    ui->pushButton_afficher->setToolTip("afficher la zone<font color='blue'>");
+
+      ui->pushButton_afficher->setToolTip("afficher la zone<font color='blue'>");
       ui->pushButton_ajouter->setToolTip("ajouter une zone ");
       ui->pushButton_modifier->setToolTip("modifier une zone");
-       ui->pushButton_supprimer->setToolTip("supprimer une zone");
-        ui->ajouterplace->setToolTip("ajouter une place");
-         ui->modifierplace->setToolTip("modifier une place");
-         ui->supprimer_4->setToolTip("supprimer une place");
-         ui->afficher_2->setToolTip("afficher les places");
+      ui->pushButton_supprimer->setToolTip("supprimer une zone");
+      ui->ajouterplace->setToolTip("ajouter une place");
+      ui->modifierplace->setToolTip("modifier une place");
+      ui->supprimer_4->setToolTip("supprimer une place");
+      ui->afficher_2->setToolTip("afficher les places");
 
-    ui->tableView_2->setVisible(false);
-    ui->tablzone->setVisible(false);
-    ui->lineEdit_cherche->setVisible(false);
-    ui->label_numz->setVisible(false);
+     /****************affichage zone **************************/
+       ui->tableView_2->setVisible(false);
+       ui->tablzone->setVisible(false);
+       ui->lineEdit_cherche->setVisible(false);
+       ui->label_numz->setVisible(false);
+/**********************animation admin client***********************************/
 
+       QMovie* movie = new QMovie("C:/Users/ASUS/Desktop/gif5.gif");
+       ui->label_16->setMovie(movie);
+       movie->start();
+       connect(movie, &QMovie::finished, movie, &QMovie::stop);
 
+       QMovie* movie2 = new QMovie("C:/Users/ASUS/Desktop/gif4.gif");
+       ui->label_17->setMovie(movie2);
+       movie2->start();
+       connect(movie2, &QMovie::finished, movie2, &QMovie::stop);
 
-
-    ui->comboBox_2->setVisible(false);
+/********************page client******************************/
+     ui->comboBox_2->setVisible(false);
      ui->comboBox->setVisible(true);
-    ui->confirmer->setVisible(false);
+     ui->confirmer->setVisible(false);
     //ui->label_4->setVisible(false);
-    ui-> label_choisirplace->setVisible(true);
-    ui->label_voiture1->setVisible(false);
-    ui->label_24->setVisible(false);
-    ui->label_28->setVisible(false);
-    ui->label_29->setVisible(false);
-      ui->label_30->setVisible(false);
-        ui->label_27->setVisible(false);
+     ui-> label_choisirplace->setVisible(true);
+     ui->label_voiture1->setVisible(false);
+     ui->label_24->setVisible(false);
+     ui->label_28->setVisible(false);
+     ui->label_29->setVisible(false);
+     ui->label_30->setVisible(false);
+     ui->label_27->setVisible(false);
+     ui->label_38->setVisible(false);
+     ui->label_placedispo->setVisible(false);
+ /*voiture wel label 1**/ ui->label_voiture1->setVisible(false);
+                          ui->label_24->setVisible(false);
+ /*voiture wel label 2**/ ui->label_37->setVisible(false);
+                              ui->label_29->setVisible(false);
+         /*voiture wel label 3**/ ui->label_36->setVisible(false);
+                                  ui->label_41->setVisible(false);
+         /*voiture wel label 4**/ ui->label_35->setVisible(false);
+                                  ui->label_40->setVisible(false);
+         /*voiture wel label 5**/ ui->label_4->setVisible(false);
+                                  ui->label_39->setVisible(false);
+         /*voiture wel label 5**/
+                                  ui->label_28->setVisible(false);
 
 
 
 
-
-
-   /* connexionp c;
-            if (c.createconnexion())
-            QMessageBox::information(this,tr("Connexion"),tr("Connected"));*/
-              /*  QMovie* movie = new QMovie("C:/Users/ASUS/Documents/s.gif");
-                ui->label_17->setMovie(movie);
-                movie->start();
-
-                connect(movie, &QMovie::finished, movie, &QMovie::stop);*/
-   QSqlQueryModel *model=new QSqlQueryModel();
+    QSqlQueryModel *model=new QSqlQueryModel();
     QSqlQuery qry;
     qry.prepare("select NUMERO from ZONE where nombre >= '1'");
     qry.exec();
@@ -102,34 +115,17 @@ parking::parking(QWidget *parent) :
     model2->select();
     ui->tablzone->setModel(tmpzone.afficherzone());
 
-
-
-    QMovie* movie = new QMovie("C:/Users/ASUS/Desktop/gif5.gif");
-    ui->label_16->setMovie(movie);
-    movie->start();
-    connect(movie, &QMovie::finished, movie, &QMovie::stop);
-
-    QMovie* movie2 = new QMovie("C:/Users/ASUS/Desktop/gif4.gif");
-    ui->label_17->setMovie(movie2);
-    movie2->start();
-    connect(movie2, &QMovie::finished, movie2, &QMovie::stop);
-
-
-
-    QSqlQuery qry2;
-    int n = 0;
-    qry2.prepare("select * from ZONE ");
-    qDebug()<<"fgh";
-    QString numero;
-    if(qry2.exec())
+/*****************afficher dans combobox les numero place:client************************/
+ QSqlQuery qry2;
+ int n = 0;
+ qry2.prepare("select * from ZONE ");
+ QString numero;
+  if(qry2.exec())
     {
-
          while(qry2.next())
          {
              n = 0;
              numero = qry2.value(0).toString();
-             //ui->comboBox->addItem(numero);
-             qDebug()<<"fgh";
              QSqlQuery qry3;
              qry3.prepare("select * from place where numero = '"+numero+"'");
              qDebug()<<"fgh";
@@ -147,8 +143,8 @@ parking::parking(QWidget *parent) :
          }
     }
 
-
 }
+
 
 parking::~parking()
 {
@@ -625,152 +621,134 @@ void parking::on_Retour_clicked()
 
 void parking::on_ok_clicked()
 {     sound3->play();
-    ui->ok->setVisible(false);
+      ui->label_choisirplace->setVisible(false);
+      ui->label_placedispo->setVisible (true);
+      ui->ok->setVisible(false);
       ui->label_25->setVisible(false);
       ui->label_26->setVisible(false);
       ui->Retour->setVisible(false);
       ui->comboBox->setVisible(false);
-ui->label_27->setVisible(true);
-       ui->comboBox_2->setVisible(true);
-       ui->confirmer->setVisible(true);
+      ui->label_27->setVisible(true);
+      ui->comboBox_2->setVisible(true);
+      ui->confirmer->setVisible(true);
        //ui->label_4->setVisible(true);
-       ui-> label_choisirplace->setVisible(true);
-       ui->label_voiture1->setVisible(true);
-          ui->label_24->setVisible(true);
-             ui->label_28->setVisible(true);
-                ui->label_29->setVisible(true);
-                  ui->label_30->setVisible(true);
+      ui->bienvenue->setVisible(false);
+      ui->label_voiture1->setVisible(true);
+      ui->label_24->setVisible(true);
+
+      ui->label_28->setVisible(true);
+      ui->label_29->setVisible(true);
+         ui->label_41->setVisible(true);
+            ui->label_40->setVisible(true);
+               ui->label_39->setVisible(true);
+      ui->label_30->setVisible(true);
+/***************combobox_2 dans place***************************/
 
 
-
-
-           QSqlQuery qry4;
-           qry4.prepare("select * from place where numero = '"+ui->comboBox->currentText()+"'");
-           if(qry4.exec())
-           {      QSqlQuery qry2;
-                  qry2.prepare("select * from PLACE ");
-                  qDebug()<<"fgh";
-                  QString numero;
-                  if(qry2.exec())
-                  {    while(qry2.next())
-                      {
-                       int n = 0;
-                        numero = qry2.value(0).toString();
-                        qDebug()<<"fgh";
-                        QSqlQuery qry3;
-                        qry3.prepare("select * from place where numero = '"+numero+"'");
-                        qDebug()<<"fgh";
-                        if(qry3.exec())
-                        {
-                            while(qry3.next())
-                            {
-                                n += qry3.value(1).toInt();
-                                qDebug()<<QString::number(n);
-                            }
-                            qDebug()<<"fgh";
-                        }
-                        if(n ==1)
-                            ui->comboBox_2->addItem(numero);
-                    }
-               int i = 0;
+  QSqlQuery qry4;
+  qry4.prepare("select * from place where numero = '"+ui->comboBox->currentText()+"'");
+    if(qry4.exec())
+      {    int i=0;
                while(qry4.next())
-               {
+               {   int n =0;
+                   QString numero = qry4.value(0).toString();
+                   QSqlQuery qry3;
+                   qry3.prepare("select * from PLACE where NUMP = '"+numero+"'");
 
-                   if(i == 0)
-                       ui->label_24->setText(qry4.value(0).toString());
-                   if(i == 1)
-                       ui->label_28->setText(qry4.value(0).toString());
-                   if(i == 2)
-                       ui->label_29->setText(qry4.value(0).toString());
 
-                   i++;
+
+                    n+= qry3.value(1).toInt();
+                   i+=qry4.value(1).toInt();
+
+                   if(i==0)
+                     {   ui->label_24->setText(qry4.value(0).toString());
+                       ui->label_voiture1->setVisible(false);
+                       ui->label_37->setVisible(false);
+                       ui->label_36->setVisible(false);
+                       ui->label_35->setVisible(false);
+                       ui->label_4->setVisible(false);
+                       ui->label_38->setVisible(false);
+
+                     }
+
+                      if(i==1)
+                        {  ui->label_29->setText(qry4.value(0).toString());
+                           /*ui->label_24->setText(qry4.value(0).toString());*/
+                                                 ui->label_voiture1->setVisible(false);
+                                                 ui->label_37->setVisible(true);
+                                                 ui->label_36->setVisible(false);
+                                                 ui->label_35->setVisible(false);
+                                                 ui->label_4->setVisible(false);
+                                                 ui->label_38->setVisible(false);
+
+
+                      }
+                       if(i==2)
+                        { ui->label_28->setText(qry4.value(0).toString());
+
+                                                  ui->label_voiture1->setVisible(false);
+                                                  ui->label_37->setVisible(false);
+                                                  ui->label_36->setVisible(false);
+                                                  ui->label_35->setVisible(false);
+                                                  ui->label_4->setVisible(true);
+                                                  ui->label_38->setVisible(true);
+                          }
+                   if(i==3)
+                      {    ui->label_41->setText(qry4.value(0).toString());
+
+
+
+                   }
+
+                  if(i==4)
+                 {    ui->label_40->setText(qry4.value(0).toString());
+
+                                             ui->label_voiture1->setVisible(false);
+                                             ui->label_37->setVisible(false);
+                                             ui->label_36->setVisible(true);
+                                             ui->label_35->setVisible(true);
+                                             ui->label_4->setVisible(true);
+                                             ui->label_38->setVisible(true);
+
+                  }
+                     if(i==5)
+                       {    ui->label_39->setText(qry4.value(0).toString());
+
+                                                ui->label_voiture1->setVisible(false);
+                                                ui->label_37->setVisible(false);
+                                                ui->label_36->setVisible(false);
+                                                ui->label_35->setVisible(false);
+                                                ui->label_4->setVisible(false);
+                                                ui->label_38->setVisible(false);
+
+                     }
+
+i++;
+
+                   qDebug()<<"fgh";
+                   if(qry3.exec())
+                   {
+                       while(qry3.next())
+                       {
+                           n+= qry3.value(1).toInt();
+                           qDebug()<<QString::number(n);
+
+                       }
+                       qDebug()<<"fgh";
+                         if(n ==0)
+                        {   ui->comboBox_2->addItem(numero);
+
+                        }
+
+                   }
+
+
                }
                qDebug()<<"fgh";
            }
+ /*************************************************************************/
 
-
-
-
-
-
-             /*
-           int p;
-           QSqlQuery qry2;
-           qry2.prepare("select NUMERO from ZONE where NUMERO='"+ui->comboBox->currentText()+"'");
-           QString numero;
-           if(qry2.exec())
-           {
-
-                while(qry2.next())
-                {
-                    p = 0;
-                    numero =qry2.value(0).toString();
-
-                    QSqlQuery qry3;
-                    qry3.prepare("select * from place where numero = '"+numero+"'");
-
-                    if(qry3.exec())
-                    {
-                        while(qry3.next())
-                        {
-                            p += qry3.value(1).toInt();
-                            qDebug()<<QString::number(p);
-                        }
-                        qDebug()<<"fgh";
-                    }
-                    if(p==0)
-                    {
-
-                         {    ui->label_5->setVisible(false);
-                             ui->label_11->setVisible(true);
-                         }
-
-                           {   ui->label_6->setVisible(false);
-
-                             ui->label_14->setVisible(true);
-                           }
-
-                        { ui->label_7->setVisible(false);
-                            ui->label_13->setVisible(true);
-                        }
-
-                        {    ui->label_8->setVisible(false);
-                             ui->label_16->setVisible(true);
-                        }
-                        { ui->label_9->setVisible(false);
-
-                          ui->label_12->setVisible(true);
-                        }
-                    }
-
-                    if (p == 1)
-                    {
-                         {
-                          ui->label_5->setVisible(true);
-                          ui->label_11->setVisible(true);
-                        }
-
-                         {  ui->label_6->setVisible(false);
-                            ui->label_14->setVisible(true);
-                         }
-
-                        {   ui->label_7->setVisible(false);
-                             ui->label_13->setVisible(true);
-                        }
-
-                       {  ui->label_8->setVisible(false);
-                            ui->label_16->setVisible(true);
-                        }
-
-                       { ui->label_9->setVisible(false);
-                         ui->label_12->setVisible(true);
-                        }
-
-                    }
-
-    }
-    }*/
-}}
+}
 
 
 void parking::on_confirmer_clicked()
