@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>backgroundCarrefour.png</file>
+        <file>gereproduit.png</file>
+        <file>gererchariot.png</file>
+        <file>Objet-dynamique-vectoriel.png</file>
+    </qresource>
+</RCC>
