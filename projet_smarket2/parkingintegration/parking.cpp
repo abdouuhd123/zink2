@@ -37,8 +37,8 @@ parking::parking(QWidget *parent) :
     sound3= new QMediaPlayer;
     sound3->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/place.mp3"));
 
-    sound1= new QMediaPlayer;
-    sound1->setMedia(QUrl("qrc:/interface/sound no.mp3"));
+    sound4= new QMediaPlayer;
+    sound4->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/sound.mp3"));
 
   /* mMediaPlayer =new QMediaPlayer(this);
    mMe                                                             xcxsiaPlayer->play();*/
@@ -76,9 +76,9 @@ parking::parking(QWidget *parent) :
 
 
 
-    connexionp c;
+   /* connexionp c;
             if (c.createconnexion())
-            QMessageBox::information(this,tr("Connexion"),tr("Connected"));
+            QMessageBox::information(this,tr("Connexion"),tr("Connected"));*/
               /*  QMovie* movie = new QMovie("C:/Users/ASUS/Documents/s.gif");
                 ui->label_17->setMovie(movie);
                 movie->start();
@@ -204,8 +204,11 @@ void parking::on_pushButton_client_clicked()
 
 
 void parking::on_pushButton_admin_clicked()
-{
-            sound->play();
+{if(sound4->state()==QMediaPlayer::PlayingState)
+        sound4->setPosition(0);
+        else if (sound4->state()==QMediaPlayer::StoppedState)
+            sound4->play();
+
     ui->stackedWidget->setCurrentIndex(3);
 
 
@@ -214,7 +217,7 @@ void parking::on_pushButton_admin_clicked()
 
 
 void parking::on_pushButton_ajouter_clicked()
-{
+{   sound4->play();
      ui->stackedWidget_2->setCurrentIndex(2);
 }
 
@@ -228,12 +231,12 @@ void parking::on_pushButton_9_clicked()
 
 
 void parking::on_afficher_clicked()
-{
+{     sound4->play();
      ui->stackedWidget_2->setCurrentIndex(1);
 }
 
 void parking::on_pushButton_supprimer_clicked()
-{
+{   sound4->play();
     ui->stackedWidget_2->setCurrentIndex(3);
 }
 
@@ -248,7 +251,7 @@ void parking::on_supprimer_clicked()
 }
 
 void parking::on_pushButton_modifier_clicked()
-{
+{sound4->play();
     ui->stackedWidget_2->setCurrentIndex(4);
 }
 
@@ -263,59 +266,59 @@ void parking::on_ajouterzone_2_clicked()
 }
 
 void parking::on_modifier_2_clicked()
-{
+{    sound4->play();
     ui->stackedWidget_2->setCurrentIndex(4);
 }
 
 void parking::on_ajouterzone_clicked()
-{
+{ sound4->play();
     ui->stackedWidget_2->setCurrentIndex(2);
 }
 
 void parking::on_kk_clicked()
-{
+{ sound4->play();
     ui->stackedWidget_2->setCurrentIndex(5);
 }
 
 void parking::on_pushButton_6hhh_clicked()
-{
+{ sound4->play();
     ui->stackedWidget_2->setCurrentIndex(5);
 }
 
 void parking::on_boutonajouter_clicked()
-{
+{ sound4->play();
     ui->stackedWidget_2->setCurrentIndex(2);
 }
 
 void parking::on_ajouter_clicked()
-{
+{   sound4->play();
     ui->stackedWidget_2->setCurrentIndex(2);
 }
 
 void parking::on_supprimer_3_clicked()
-{
+{   sound4->play();
     ui->stackedWidget_2->setCurrentIndex(3);
 }
 
 void parking::on_modifier_clicked()
-{
+{   sound4->play();
     ui->stackedWidget_2->setCurrentIndex(4);
 }
 
 void parking::on_afficherrecherchezone_clicked()
-{
+{ sound4->play();
     ui->stackedWidget_2->setCurrentIndex(1);
 }
 
 void parking::on_afficherrecherche_clicked()
-{
+{ sound4->play();
     ui->stackedWidget_2->setCurrentIndex(1);
 }
 
 
 
 void parking::on_ajouterplace_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(3);
 }
 
@@ -335,77 +338,77 @@ void parking::on_afficher_2_clicked()
 }
 
 void parking::on_supprimer_4_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(4);
 }
 
 void parking::on_modifierplace_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(1);
 }
 
 void parking::on_supprimerplace_4_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(4);
 }
 
 void parking::on_ajouterplace_5_clicked()
-{
+{   sound4->play();
     ui->gererplace_3->setCurrentIndex(3);
 }
 
 void parking::on_afficherplace_4_clicked()
-{
+{   sound4->play();
     ui->gererplace_3->setCurrentIndex(2);
 }
 
 void parking::on_ajouterplace_4_clicked()
-{
+{  sound4->play();
     ui->gererplace_3->setCurrentIndex(3);
 }
 
 void parking::on_supprimerplace_3_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(4);
 }
 
 void parking::on_modifierplace_4_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(1);
 }
 
 void parking::on_afficherplace_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(2);
 }
 
 void parking::on_supprimerplace_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(4);
 }
 
 void parking::on_modifierplace_2_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(1);
 }
 
 void parking::on_afficherplace_2_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(2);
 }
 
 void parking::on_ajouterplace_2_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(3);
 }
 
 void parking::on_modifierplace_3_clicked()
-{
+{ sound4->play();
     ui->gererplace_3->setCurrentIndex(1);
 }
 
 void parking::on_confirmerajout_clicked()
-{
+{ sound4->play();
     int num= ui->numeroaajouter->text().toInt();
  // int etat= ui->lineEdit_2->text().toInt();
  //int etat=0;
@@ -435,7 +438,7 @@ void parking::on_confirmerajout_clicked()
 }
 
 void parking::on_confirmerajouterzone_clicked()
-{
+{ sound4->play();
     int numero= ui->lineEdit_numzone->text().toInt();
     int nombre= ui->lineEdit_nombreplace->text().toInt();
      QString n= ui->lineEdit_nombreplace->text();
@@ -464,7 +467,7 @@ else
 }
 
 void parking::on_modifier_3_clicked()
-{
+{ sound4->play();
     int Numero= ui->lineEdit_num->text().toInt();
     int NOMBRE= ui->lineEdit_nom->text().toInt();
            if(NOMBRE <=6)
@@ -483,7 +486,8 @@ void parking::on_modifier_3_clicked()
 }
 
 void parking::on_pushButton_suppzone_clicked()
-{    QMessageBox msgBox;
+{     sound4->play();
+    QMessageBox msgBox;
      msgBox.setStyleSheet("background-color: gray ; color : gray");
      QMessageBox ::question(this, tr("confirmation"),
                                                 tr("t'es sur de supprimer la zone?.\n"
@@ -509,7 +513,7 @@ void parking::on_pushButton_suppzone_clicked()
 }
 
 void parking::on_pushButton_confirmermodification_clicked()
-{
+{ sound4->play();
     int Numero= ui->lineEdit_numplace->text().toInt();
     int etat= ui->lineEdit_etatmodifier->text().toInt();
       Place p(Numero,etat);
@@ -528,7 +532,7 @@ void parking::on_pushButton_confirmermodification_clicked()
 }
 
 void parking::on_pushButton_confirmersupprimer_clicked()
-{   QMessageBox msgBox;
+{  sound4->play();  QMessageBox msgBox;
     QMessageBox ::question(this, tr("confirmation"),
                                                tr("t'es sur de supprimer la place?.\n"
                                                   "confirmer?"),
@@ -560,62 +564,62 @@ QMessageBox::StandardButton reply;
 }
 
 void parking::on_place_clicked()
-{
+{    sound4->play();
     ui->stackedWidget->setCurrentIndex(5);
 }
 
 void parking::on_zone_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(1);
 }
 
 void parking::on_verifier_clicked()
-{
+{ sound4->play();
     ui->stackedWidget->setCurrentIndex(6);
 }
 
 void parking::on_retour_3_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(4);
 }
 
 void parking::on_retour_2_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(4);
 }
 
 void parking::on_retour_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(4);
 }
 
 void parking::on_retour_5_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(4);
 }
 
 void parking::on_retour_6_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(4);
 }
 
 void parking::on_retour_7_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(4);
 }
 
 void parking::on_retour_8_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(4);
 }
 
 void parking::on_retour_4_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(4);
 }
 
 void parking::on_Retour_clicked()
-{
+{ sound4->play();
      ui->stackedWidget->setCurrentIndex(2);
 }
 
@@ -770,7 +774,7 @@ ui->label_27->setVisible(true);
 
 
 void parking::on_confirmer_clicked()
-{
+{  sound4->play();
     QString zone = ui->comboBox->currentText();
     QString place = ui->comboBox_2->currentText();
     QString zonechoisi = "La Zone Choisi Est : ";
@@ -797,7 +801,7 @@ void parking::on_lineEdit_cherche_textChanged(const QString &arg1)
 }
 
 void parking::on_chercherplace_clicked()
-{
+{   sound4->play();
     ui->tableView_2->setVisible(true);
     ui->tablzone->setVisible(false);
     ui->lineEdit_cherche->setVisible(true);
@@ -807,11 +811,12 @@ void parking::on_chercherplace_clicked()
 }
 
 void parking::on_pushButton_affichz_clicked()
-{
+{     sound4->play();
     ui->tableView_2->setVisible(false);
     ui->tablzone->setVisible(true);
     ui->lineEdit_cherche->setVisible(false);
     ui->label_numz->setVisible(false);
+       ui->pushButton_7->setVisible(true);
 
 }
 
@@ -869,14 +874,21 @@ void parking::on_page_choisirclientadmin_customContextMenuRequested(const QPoint
 }
 
 void parking::on_pushButton_7_clicked()
-{   Zone z;
+{   sound4->play();
+    Zone z;
     ui->tablzone->setModel(z.tri_par_numero());
 }
 
 void parking::on_filtrer_clicked()
-{
+{   sound4->play();
     Place p;
        ui->tableView->setModel(p.tri_par_numero());
 }
 
 
+
+void parking::on_pushButton_afficher_clicked()
+{
+    sound4->play();
+     ui->stackedWidget_2->setCurrentIndex(1);
+}

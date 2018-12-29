@@ -180,6 +180,8 @@ private slots:
 
 
 
+    void on_pushButton_afficher_clicked();
+
 private:
     Ui::parking *ui;
     Zone tmpzone;
@@ -192,6 +194,7 @@ QMediaPlayer *mMediaPlayer;
     QMediaPlayer *sound;
     QMediaPlayer *sound1;
      QMediaPlayer *sound3;
+      QMediaPlayer *sound4;
 };
 
 #endif // PARKING_H

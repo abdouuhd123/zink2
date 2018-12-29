@@ -27,7 +27,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="page_">
      <widget class="QPushButton" name="pushButton_5">
@@ -834,7 +834,7 @@ color: rgb(179, 179, 193);</string>
 	}</string>
         </property>
         <property name="text">
-         <string>Filtrer </string>
+         <string>trier</string>
         </property>
        </widget>
        <zorder>label_33</zorder>
@@ -4233,8 +4233,7 @@ background-color: rgb(255, 255, 255);
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
