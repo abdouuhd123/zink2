@@ -35,7 +35,7 @@ int cherchermat(QString );
 int cherchermodele(QString );
 int cherchermarque(QString );
 bool verifier(QString );
- QSqlQueryModel * tri_par_numero();
+ QSqlQueryModel * tri_par_numero1();
  QSqlQueryModel * chercher_avance();
  QSqlQueryModel * nombrepositif();
 

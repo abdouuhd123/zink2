@@ -99,7 +99,7 @@ QSqlQueryModel * Zone::nombrepositif()
      model->setQuery(qry);
 
 }
-QSqlQueryModel *Zone::tri_par_numero()
+QSqlQueryModel *Zone::tri_par_numero1()
 {
     QSqlQueryModel *model=new QSqlQueryModel();
     model->setQuery("select * from ZONE order by NUMERO ");

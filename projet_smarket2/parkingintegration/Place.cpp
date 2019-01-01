@@ -115,7 +115,7 @@ QSqlQueryModel *model=new QSqlQueryModel();
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUMP"));
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("ETAT"));
 }
-QSqlQueryModel *Place::tri_par_numero()
+QSqlQueryModel *Place::tri_par_numero2()
 {
     QSqlQueryModel *model=new QSqlQueryModel();
     model->setQuery("select * from PLACE order by NUMP ");

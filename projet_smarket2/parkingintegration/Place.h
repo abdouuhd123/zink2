@@ -19,7 +19,7 @@ public:
    bool supprimer(int);
        bool modifierplace(int numero);
          QSqlQueryModel * placedanslazone(QString);
-          QSqlQueryModel * tri_par_numero();
+          QSqlQueryModel * tri_par_numero2();
             void selectionner(int);
 
 

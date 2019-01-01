@@ -10,7 +10,7 @@
 #include "Place.h"
 #include <QString>
 #include <QSqlQueryModel>
-#include "Zone.h"
+#include "zone.h"
 #include "connexionp.h"
 #include <QMovie>
 #include <QMediaPlayer>
@@ -930,14 +930,14 @@ void parking::on_page_choisirclientadmin_customContextMenuRequested(const QPoint
 
 void parking::on_pushButton_7_clicked()
 {   sound4->play();
-    Zone z;
-    ui->tablzone->setModel(z.tri_par_numero());
+    Zone z ;
+    ui->tablzone->setModel(z.tri_par_numero1());
 }
 
 void parking::on_filtrer_clicked()
 {   sound4->play();
     Place p;
-       ui->tableView->setModel(p.tri_par_numero());
+       ui->tableView->setModel(p.tri_par_numero2());
 }
 
 
