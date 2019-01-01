@@ -5,7 +5,9 @@
 #include "blocc.h"
 #include "accidentc.h"
 #include <QDialog>
-#include "connexion.h"
+
+#include "parkingintegration/connexionp.h"
+
 //#include "statistic.h"
 #include "uiemail.h"
 namespace Ui {

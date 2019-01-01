@@ -2,6 +2,8 @@
 #define ACCIDENTC_H
 
 #include "connexion.h"
+#include "parkingintegration/connexionp.h"
+
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>

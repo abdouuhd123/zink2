@@ -1,6 +1,6 @@
 #ifndef BLOCC_H
 #define BLOCC_H
-#include "connexion.h"
+#include "parkingintegration/connexionp.h"
 
 
 #include <QString>

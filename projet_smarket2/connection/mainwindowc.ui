@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>542</y>
+     <x>510</x>
+     <y>610</y>
      <width>221</width>
      <height>51</height>
     </rect>
@@ -49,8 +49,8 @@
   <widget class="QLineEdit" name="LE_password">
    <property name="geometry">
     <rect>
-     <x>520</x>
-     <y>439</y>
+     <x>540</x>
+     <y>510</y>
      <width>221</width>
      <height>31</height>
     </rect>
@@ -79,14 +79,14 @@ background-color: rgb(255, 255, 255);
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>0</y>
+     <x>-610</x>
+     <y>-200</y>
      <width>1331</width>
      <height>701</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-image: url(:/interface/Untitled-zrf.png);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string/>
@@ -99,7 +99,7 @@ background-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>349</y>
+     <y>420</y>
      <width>221</width>
      <height>31</height>
     </rect>
@@ -135,6 +135,23 @@ background-color: rgb(255, 255, 255);
     <string/>
    </property>
   </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>1191</width>
+     <height>721</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/interface/Untitled-zrf.png);</string>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <zorder>label_2</zorder>
   <zorder>label</zorder>
   <zorder>LE_username</zorder>
   <zorder>l_titre</zorder>

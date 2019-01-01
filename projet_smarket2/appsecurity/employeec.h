@@ -1,7 +1,7 @@
 #ifndef EMPLOYEEC_H
 #define EMPLOYEEC_H
 
-#include "connexion.h"
+#include "parkingintegration/connexionp.h"
 
 #include <QString>
 #include <QSqlQuery>
