@@ -341,11 +341,14 @@ background:rgba(0,0,0,85);
      <height>591</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="ressources.qrc">:/new/prefix1/gererchariot.png</pixmap>
+    <pixmap>:/new/prefix1/gererchariot.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_retour">
@@ -387,8 +390,6 @@ border:transparent;</string>
   <zorder>pushButton_effectuer</zorder>
   <zorder>pushButton_retour</zorder>
  </widget>
- <resources>
-  <include location="ressources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

@@ -160,11 +160,14 @@ background:rgba(0,0,0,85);
      <height>581</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/gereproduit.png);</string>
+   </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="ressources.qrc">:/new/prefix1/gereproduit.png</pixmap>
+    <pixmap>:/new/prefix1/gereproduit.png</pixmap>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_retour">
@@ -206,8 +209,6 @@ border:transparent;</string>
   <zorder>pushButton_retour</zorder>
   <zorder>lineEdit</zorder>
  </widget>
- <resources>
-  <include location="ressources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

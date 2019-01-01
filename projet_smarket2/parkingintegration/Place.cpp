@@ -127,14 +127,16 @@ QSqlQueryModel *Place::tri_par_numero()
 }
 void Place::selectionner(int numero)
 {
+
     QSqlQuery qry;
-    qry.prepare("select * from PLACE where NUMERO= ?");
-    qry.addBindValue(numero);
+    qry.prepare("select * from place where nump= ?");
+    qry.addBindValue(num);
     if(qry.exec())
     {
         while (qry.next())
         {
-            numero=qry.value(0).toInt();
+            num=qry.value(0).toInt();
+            etat=qry.value(1).toInt();
 
 
 

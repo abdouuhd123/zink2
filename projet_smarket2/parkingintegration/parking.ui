@@ -27,7 +27,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="page_">
      <widget class="QPushButton" name="pushButton_5">
@@ -3111,6 +3111,296 @@ background-image: url(:/1.png);</string>
          <string>Retour</string>
         </property>
        </widget>
+       <widget class="QPushButton" name="pushButton_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>142</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_8{ 
+font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_8:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>-Afficher les Zones</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_9">
+        <property name="geometry">
+         <rect>
+          <x>19</x>
+          <y>140</y>
+          <width>142</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_9{ 
+font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_9:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>-Ajouter une zone</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_10">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>170</y>
+          <width>142</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_10{ 
+font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_10:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>-Supprimer une Zone</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_11">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>240</y>
+          <width>182</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_11{ 
+font: 63 10pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_11:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>Gérer Place :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_12">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>270</y>
+          <width>142</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_12{ 
+font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_12:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>-Afficher les Places</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_13">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>300</y>
+          <width>142</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_13{ 
+font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_13:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>-Ajouter une Place</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_14">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>200</y>
+          <width>142</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_14{ 
+font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_14:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>-Modifier une Zone</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_15">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>80</y>
+          <width>182</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_15{ 
+font: 63 10pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_15:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>Gérer Zone :</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_16">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>330</y>
+          <width>142</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_16{ 
+font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_16:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>-Supprimer une Place</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_17">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>360</y>
+          <width>142</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#pushButton_17{ 
+font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
+background-color: transparent;
+border-style: outset;
+	color: rgb(255, 255, 255);
+border-radius: 10px;
+border-color: blue;
+min-width: 10em;
+padding: 6px;
+}
+#pushButton_17:hover:!pressed {
+background-color: rgb(3, 38, 77);
+border-style: inset;
+}</string>
+        </property>
+        <property name="text">
+         <string>-Modifier une Place</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="modifierplace_5">
        <widget class="QLabel" name="label_9">
@@ -3467,8 +3757,8 @@ color:  rgb(179, 179, 193);</string>
        <widget class="QPushButton" name="filtrer">
         <property name="geometry">
          <rect>
-          <x>800</x>
-          <y>500</y>
+          <x>930</x>
+          <y>520</y>
           <width>131</width>
           <height>41</height>
          </rect>
@@ -3996,8 +4286,8 @@ background-color: rgb(179, 179, 193);</string>
      <widget class="QPushButton" name="Retour">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>530</y>
+        <x>60</x>
+        <y>560</y>
         <width>121</width>
         <height>31</height>
        </rect>
@@ -4429,7 +4719,7 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <widget class="QPushButton" name="confirmera">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>650</x>
         <y>290</y>
         <width>141</width>
         <height>61</height>
@@ -4459,6 +4749,43 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
        <string>Confirmera</string>
       </property>
      </widget>
+     <widget class="QComboBox" name="comboBox_3">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>400</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#lineEdit:hover{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#lineEdit{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>310</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+     </widget>
      <zorder>label_choisirplace</zorder>
      <zorder>label_placedispo</zorder>
      <zorder>ok</zorder>
@@ -4485,6 +4812,8 @@ font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <zorder>label_38</zorder>
      <zorder>arduino</zorder>
      <zorder>confirmera</zorder>
+     <zorder>comboBox_3</zorder>
+     <zorder>lineEdit</zorder>
     </widget>
    </widget>
    <widget class="QLabel" name="label">

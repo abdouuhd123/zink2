@@ -16,23 +16,31 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>210</y>
-     <width>75</width>
-     <height>23</height>
+     <x>490</x>
+     <y>542</y>
+     <width>221</width>
+     <height>51</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">/*backgroung:transparent;
-border:transparent;
-QPushButton{
-background:rgba(255,255,255,0);
-border-radius:8px;
-}
-QPushButton::hover{
-background:rgba(0,0,0,85);
-}*/
-	background-color: rgb(85, 0, 255);</string>
+    <string notr="true">#pushButton{
+	font: 18pt &quot;Bahnschrift&quot;;
+
+	background-color: rgb(179, 179, 193);
+	
+	
+	
+	color: rgb(0, 0, 127);
+	
+;}
+
+
+#pushButton:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
    </property>
    <property name="text">
     <string/>
@@ -41,11 +49,28 @@ background:rgba(0,0,0,85);
   <widget class="QLineEdit" name="LE_password">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>130</y>
-     <width>113</width>
-     <height>20</height>
+     <x>520</x>
+     <y>439</y>
+     <width>221</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#LE_password{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#LE_password:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
@@ -57,24 +82,44 @@ background:rgba(0,0,0,85);
      <x>0</x>
      <y>0</y>
      <width>1331</width>
-     <height>551</height>
+     <height>701</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/interface/Untitled-zrf.png);</string>
    </property>
    <property name="text">
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap resource="ressources.qrc">:/new/prefix1/Objet-dynamique-vectoriel.png</pixmap>
+    <pixmap>:/new/prefix1/Objet-dynamique-vectoriel.png</pixmap>
    </property>
   </widget>
   <widget class="QLineEdit" name="LE_username">
    <property name="geometry">
     <rect>
-     <x>380</x>
-     <y>170</y>
-     <width>113</width>
-     <height>20</height>
+     <x>520</x>
+     <y>349</y>
+     <width>221</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#LE_username{
+
+background-color: rgb(255, 255, 255);
+	
+	color: rgb(4, 44, 89);
+	
+;}
+
+
+#LE_username:hover{
+;
+
+	color: rgb(255, 255, 255);
+	background-color: rgb(4, 44, 89);
+	}</string>
    </property>
   </widget>
   <widget class="QLabel" name="l_titre">
@@ -87,7 +132,7 @@ background:rgba(0,0,0,85);
     </rect>
    </property>
    <property name="text">
-    <string>login</string>
+    <string/>
    </property>
   </widget>
   <zorder>label</zorder>
@@ -96,8 +141,6 @@ background:rgba(0,0,0,85);
   <zorder>LE_password</zorder>
   <zorder>pushButton</zorder>
  </widget>
- <resources>
-  <include location="ressources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

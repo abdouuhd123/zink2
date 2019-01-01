@@ -27,6 +27,7 @@ private:
     int num;
     int etat;
 
+
 };
 
 #endif // PLACE_H

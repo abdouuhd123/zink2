@@ -40,7 +40,7 @@ void mainwindowc::on_pushButton_clicked()
     username=ui->LE_username->text();
     password=ui->LE_password->text();
 
-    qry.prepare("select * from login_chariot where username=? and  password=? ");
+    qry.prepare("select * from LOGIN_CHARIOT where USERNAME= ? and  PASSWORD=? ");
     qry.addBindValue(username);
     qry.addBindValue(password);
 

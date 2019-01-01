@@ -186,6 +186,9 @@ private slots:
 
     void on_confirmera_clicked();
 
+
+    void on_comboBox_activated(const QString &arg1);
+
 private:
     Ui::parking *ui;
     Zone tmpzone;
@@ -199,6 +202,7 @@ QMediaPlayer *mMediaPlayer;
     QMediaPlayer *sound1;
      QMediaPlayer *sound3;
       QMediaPlayer *sound4;
+         int indice;
 };
 
 #endif // PARKING_H
