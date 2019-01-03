@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hantot.qrc</file>
+        <file>the-real-interface.png</file>
+        <file>produit_copy.png</file>
+        <file>produit.png</file>
+        <file>affich-prod.png</file>
+        <file>ajout-mod-produit.png</file>
+        <file>fournisseur.cpp</file>
+        <file>fournisseur.png</file>
+        <file>ajou-modf-four.png</file>
+        <file>affic-fourn.png</file>
+        <file>mail-four.png</file>
+        <file>rayon.png</file>
+        <file>ajout-mod-rayon.png</file>
+        <file>affich-rayo.png</file>
+        <file>commande.png</file>
+        <file>ajout-mod-com.png</file>
+        <file>affich-comm.png</file>
+        <file>imprimer.png</file>
+    </qresource>
+</RCC>
