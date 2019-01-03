@@ -7,7 +7,7 @@ bool connexionp::createconnexion()
 dbp = QSqlDatabase::addDatabase("QODBC");
 dbp.setDatabaseName("Source_Projet2A");
 dbp.setUserName("system");//inserer nom de l'utilisateur
-dbp.setPassword("siwar");//inserer mot de passe de cet utilisateur
+dbp.setPassword("abdou123");//inserer mot de passe de cet utilisateur
 
 if (dbp.open()){
     qDebug() <<"connexion ok";

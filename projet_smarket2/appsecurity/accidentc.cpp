@@ -79,9 +79,7 @@ QSqlQueryModel *model=new QSqlQueryModel();
 QSqlQuery q;
 QString s1=s;
 QString s2=s;
-//q.prepare("select * from ACCIDENT where ID like ? ");
-//q.prepare("select * from ACCIDENT where TYPE like ?");
-//q.prepare("select * from ACCIDENT where DATE_A like ?");
+
 q.prepare("select * from ACCIDENT where ID like ? or TYPE like ? or DATE_A like ?");
 
 q.addBindValue("%"+s+"%");

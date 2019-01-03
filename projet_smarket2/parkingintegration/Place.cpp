@@ -112,14 +112,17 @@ QSqlQueryModel * Place::placedanslazone(QString numero)
 {
 QSqlQueryModel *model=new QSqlQueryModel();
     model->setQuery("select * from PLACE where NUMERO = '"+numero+"'");
+
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUMP"));
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("ETAT"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("NUMERO"));
+
 }
 QSqlQueryModel *Place::tri_par_numero2()
 {
     QSqlQueryModel *model=new QSqlQueryModel();
     model->setQuery("select * from PLACE order by NUMP ");
-    model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUMERO"));
+    model->setHeaderData(2,Qt::Horizontal,QObject::tr("NUMERO"));
     model->setHeaderData(0,Qt::Horizontal,QObject::tr("NUMP"));
     model->setHeaderData(1,Qt::Horizontal,QObject::tr("ETAT"));
     return model;
@@ -144,3 +147,103 @@ void Place::selectionner(int numero)
         }
     }
 }
+QSqlQueryModel *Place:: placearduino6()
+
+{
+    QSqlQueryModel *model=new QSqlQueryModel();
+
+
+QVector <QString> tab;
+
+    QSqlQuery qry5;
+    qry5.prepare("select * from place where numero = 6");
+ qry5.exec();
+ model->setQuery(qry5);
+
+    if(qry5.exec())
+    {
+        int i = 0;
+        while(qry5.next())
+        {
+
+           /*if(i == 0)
+            k=qry5.value(0).toString();
+            if(i == 1)
+            l=qry5.value(0).toString();*/
+            tab.push_back(qry5.value(0).toString());
+
+k=tab[0];
+//l=tab[1];
+
+
+            i++;
+        }
+        k=tab[0];
+        l=tab[1];
+
+
+    }
+    return model;
+}
+
+
+QSqlQueryModel *Place::placearduinocombobo(int no)
+{   QSqlQueryModel *model=new QSqlQueryModel();
+    QSqlQuery qry5;
+    QVector <QString> tab;
+    qry5.prepare("select * from place where numero = :no");
+    qry5.bindValue(":n",no);
+ qry5.exec();
+ model->setQuery(qry5);
+
+    if(qry5.exec())
+    {
+        int i = 0;
+        while(qry5.next())
+        {
+
+           /*if(i == 0)
+            k=qry5.value(0).toString();
+            if(i == 1)
+            l=qry5.value(0).toString();*/
+            tab.push_back(qry5.value(0).toString());
+
+//k=tab[0];
+//l=tab[1];
+
+
+            i++;
+        }
+        k=tab[0];
+        l=tab[1];
+        m=tab[2];
+        n=tab[3];
+        o=tab[4];
+        p=tab[5];
+
+
+
+
+    }
+    return model;
+
+
+
+}
+ bool Place :: supprimerverifier(int)
+ {
+     QSqlQuery b;
+           QString things("SELECT count(*) as nombre  FROM PLACE where NUMP='");
+           things+=num;
+           things+="'";
+           int b1=0;
+           qDebug() <<things;
+           if(b.exec(things)){
+               while(b.next()){
+                   if(b.value(0).toInt()>0){
+                       b1=1;
+                   }
+               }
+           }
+ }
+

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1200</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QCustomPlot" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>70</y>
+      <x>360</x>
+      <y>250</y>
       <width>591</width>
       <height>411</height>
      </rect>
@@ -27,24 +27,50 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>30</y>
+      <x>1010</x>
+      <y>700</y>
       <width>75</width>
-      <height>23</height>
+      <height>31</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+border: none;
+color: rgb(255, 255, 255);
+
+</string>
+    </property>
     <property name="text">
-     <string>retour</string>
+     <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1200</width>
+      <height>751</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/interface/beyaaa.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>widget</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>1200</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

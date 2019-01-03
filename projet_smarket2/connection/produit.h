@@ -14,6 +14,8 @@
 #include"classe_produit.h"
 #include"uiemail1.h"
 #include"chariot.h"
+#include"parkingintegration/arduino.h"
+
 namespace Ui {
 class produit;
 }
@@ -42,11 +44,16 @@ private slots:
     void on_pushButton_retour_clicked();
 
     //void on_lineEdit_cursorPositionChanged(int arg1, int arg2);
+    void update_label();
+
+    void on_pushButton_3_clicked();
 
 private:
     Ui::produit *ui;
     classe_produit p;
     int indice;
+    Arduino a ;
+    QByteArray data;
 };
 
 #endif // PRODUIT_H

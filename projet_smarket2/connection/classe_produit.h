@@ -13,15 +13,15 @@ class classe_produit
 public:
     classe_produit();
     int getId_produit(){return id_produit;}
-    QDate getDate_limite(){return date_limite;}
+    QString getDate_limite(){return date_limite;}
 
 
     void setId_produit(int id_produit){this->id_produit=id_produit;}
-    void setDate(QDate date_limite){this->date_limite=date_limite;}
+    void setDate(QString date_limite){this->date_limite=date_limite;}
 
-    classe_produit(int,QDate);
+    classe_produit(int,QString);
 
-    void ajouter_produit(classe_produit);
+    bool ajouter_produit(classe_produit);
 
     QSqlQueryModel * afficher_produit();
     void selectionner(int);
@@ -29,7 +29,7 @@ public:
     QSqlQueryModel *tri_par_date();
 private:
     int id_produit;
-    QDate date_limite;
+    QString date_limite;
 
 
 

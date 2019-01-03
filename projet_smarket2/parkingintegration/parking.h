@@ -3,7 +3,7 @@
 #include "Place.h"
 #include <QMainWindow>
 #include <QDialog>
-#include "Zone.h"
+#include "zone.h"
 #include <QtMultimedia/QMediaPlayer>
 #include <QtSql>
 #include <QSqlDatabase>
@@ -28,6 +28,7 @@ public:
     ~parking();
 
 private slots:
+    void capteur();
     void on_pushButton_clicked();
 
     void on_pushButton_2_clicked();
@@ -188,6 +189,8 @@ private slots:
 
 
     void on_comboBox_activated(const QString &arg1);
+
+    void on_pushButton_37_clicked();
 
 private:
     Ui::parking *ui;

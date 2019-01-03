@@ -14,6 +14,7 @@ class Zone
     QVector <Place> Places;
 
 public:
+    QVector <QString> dispo;
     int Nombre;
     Zone();
     Zone(int ,int ,int );
@@ -38,6 +39,8 @@ bool verifier(QString );
  QSqlQueryModel * tri_par_numero1();
  QSqlQueryModel * chercher_avance();
  QSqlQueryModel * nombrepositif();
+ QSqlQueryModel *comboBoxdansajouterplace();
+   void nombreplaceinferieurasix();
 
 };
 

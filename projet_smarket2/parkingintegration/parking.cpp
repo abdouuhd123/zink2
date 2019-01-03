@@ -1,4 +1,5 @@
 #include "parking.h"
+#include "parking.h"
 #include "ui_parking.h"
 #include "agent.h"
 #include <QDialogButtonBox>
@@ -15,7 +16,7 @@
 #include <QMovie>
 #include <QMediaPlayer>
 #include "arduino.h"
-
+#include "smarket.h"
 
 parking::parking(QWidget *parent) :
     QMainWindow(parent),
@@ -25,14 +26,20 @@ parking::parking(QWidget *parent) :
      indice=-1;
 
 /************************connexion arduino*******************************************/
-    int ret=A.connect_arduino(); // lancer la connexion Ã  arduino
-    switch(ret){
-    case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
-        break;
-    case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
-       break;
-    case(-1):qDebug() << "arduino is not available";
-               }
+     /// ARDUINO INITIALIZATION ///
+                /*   int  ret=A.connect_arduino();
+                   switch(ret){
+                      case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+                          break;
+                      case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+                         break;
+                      case(-1):qDebug() << "arduino is not available";
+                      }*/
+
+                   QTimer *timer = new QTimer(this);
+                   connect(timer, SIGNAL(timeout()), this, SLOT(capteur()));
+                      timer->start(1000);
+
 /***************************ajouter sound***********************************************/
     sound= new QMediaPlayer;
     sound->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/bienvenue.mp3"));
@@ -40,7 +47,7 @@ parking::parking(QWidget *parent) :
     sound3->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/place.mp3"));
     sound4= new QMediaPlayer;
     sound4->setMedia(QUrl("C:/Users/ASUS/Documents/projetsmarket/sound.mp3"));
- ui->arduino->setVisible(true);
+// ui->arduino->setVisible(true);
  ui->confirmera->setVisible(true);
 
       ui->pushButton_afficher->setToolTip("afficher la zone<font color='blue'>");
@@ -59,12 +66,12 @@ parking::parking(QWidget *parent) :
        ui->label_numz->setVisible(false);
 /**********************animation admin client***********************************/
 
-       QMovie* movie = new QMovie("C:/Users/ASUS/Desktop/gif5.gif");
+       QMovie* movie = new QMovie("C:/Users/abdel/Desktop/gif5.gif");
        ui->label_16->setMovie(movie);
        movie->start();
        connect(movie, &QMovie::finished, movie, &QMovie::stop);
 
-       QMovie* movie2 = new QMovie("C:/Users/ASUS/Desktop/gif4.gif");
+       QMovie* movie2 = new QMovie("C:/Users/abdel/Desktop/gif4.gif");
        ui->label_17->setMovie(movie2);
        movie2->start();
        connect(movie2, &QMovie::finished, movie2, &QMovie::stop);
@@ -101,13 +108,10 @@ parking::parking(QWidget *parent) :
  ui->comboBox_3->addItem("6");
 
 
-    QSqlQueryModel *model=new QSqlQueryModel();
-    QSqlQuery qry;
-    qry.prepare("select NUMERO from ZONE where nombre >= '1'");
-    qry.exec();
-    model->setQuery(qry);
 
-    ui->choisirzone->setModel(model);
+  Zone z;
+
+    ui->choisirzone->setModel(z.comboBoxdansajouterplace());
     ui->comboBox_etat->addItem("0");
     ui->comboBox_etat->addItem("1");
     ui->tableView->setModel(tmpplace.afficher());
@@ -123,13 +127,16 @@ parking::parking(QWidget *parent) :
  QSqlQuery qry2;
  int n = 0;
  qry2.prepare("select * from ZONE ");
+
  QString numero;
   if(qry2.exec())
     {
          while(qry2.next())
          {
-             n = 0;
-             numero = qry2.value(0).toString();
+           int  n = 0;
+
+              numero = qry2.value(0).toString();
+
              QSqlQuery qry3;
              qry3.prepare("select * from place where numero = '"+numero+"'");
              qDebug()<<"fgh";
@@ -146,6 +153,13 @@ parking::parking(QWidget *parent) :
                  ui->comboBox->addItem(numero);
          }
     }
+/*Zone z1;
+z1.nombreplaceinferieurasix();
+for(QVector<QString>::iterator i=z1.dispo.begin();i!=z1.dispo.end();i++)
+     { ui->comboBox->addItem(*i);
+
+ qDebug()<<"place"<<z.nombreplaceinferieurasix();*/
+
   /****************************************************/
 
 
@@ -189,6 +203,71 @@ void parking::on_pushButton_3_clicked()
 ;
 
 }
+void parking::capteur(){
+   // QString d=A.read_from_arduino();
+    int i,j,t=0,t1=0;
+
+/*for(i=0; i<d.size(); i++)
+{
+    if (d[i]=='d')
+    {
+        if (d[i+1]=='3')
+              t=1;
+        if (d[i+1]=='2')
+              t=2;
+
+    }
+}
+for(j=0; j<d.size(); j++)
+    {
+    if (d[j]=='c')
+    {
+        if (d[j+1]=='0')
+              t1=1;
+        if (d[j+1]=='1')
+              t1=2;
+
+    }
+
+}
+      if(t==1)
+      {
+          QSqlQuery qry;
+          qry.prepare("UPDATE PLACE SET etat=1 where nump=100");
+          qry.exec();
+           ui->tableView->setModel(tmpplace.afficher());
+
+      }
+      if(t==2)
+      {
+          QSqlQuery qry;
+          qry.prepare("UPDATE PLACE SET etat=0 where nump=100");
+          qry.exec();
+           ui->tableView->setModel(tmpplace.afficher());
+
+      }
+
+      if(t1==1)
+      {
+          QSqlQuery qry;
+          qry.prepare("UPDATE PLACE SET etat=0 where nump=101");
+          qry.exec();
+           ui->tableView->setModel(tmpplace.afficher());
+
+      }
+
+      if(t1==2)
+      {
+          QSqlQuery qry;
+          qry.prepare("UPDATE PLACE SET etat=1 where nump=101");
+          qry.exec();
+           ui->tableView->setModel(tmpplace.afficher());
+
+      }
+
+      qDebug() << "Arduino :" << d;*/
+}
+
 
 void parking::on_pushButton_4_clicked()
 {
@@ -370,7 +449,7 @@ void parking::on_ajouterplace_clicked()
 
 void parking::on_afficher_2_clicked()
 {
-    ui->gererplace_3->setCurrentIndex(2);
+ /*   ui->gererplace_3->setCurrentIndex(2);
     QString a=A.read_from_arduino();
     qDebug()  <<"ARDUINO :"<< a;
     if(a=="1")
@@ -380,7 +459,7 @@ void parking::on_afficher_2_clicked()
     if(a=="0")
     {
      ui->label_32->setText("0");
-    }
+    }*/
 }
 
 void parking::on_supprimer_4_clicked()
@@ -445,7 +524,7 @@ void parking::on_afficherplace_2_clicked()
 
 void parking::on_ajouterplace_2_clicked()
 { sound4->play();
-    ui->gererplace_3->setCurrentIndex(3);
+
 }
 
 void parking::on_modifierplace_3_clicked()
@@ -473,12 +552,9 @@ void parking::on_confirmerajout_clicked()
             QMessageBox::critical(nullptr, QObject::tr("place Non Ajoutée !"),
                         QObject::tr("Erreur !.\n"
                                     "Click Cancel to exit."), QMessageBox::Cancel);
-        QSqlQueryModel *model=new QSqlQueryModel();
-        QSqlQuery qry;
-        qry.prepare("select NUMERO from ZONE where nombre >= '1'");
-        qry.exec();
-        model->setQuery(qry);
-        ui->choisirzone->setModel(model);
+
+        Zone z;
+        ui->choisirzone->setModel(z.comboBoxdansajouterplace());
         ui->comboBox_etat->addItem("0");
         ui->comboBox_etat->addItem("1");
 }
@@ -585,7 +661,7 @@ void parking::on_pushButton_confirmersupprimer_clicked()
                                                QMessageBox::Yes | QMessageBox::No
                                              );
 
-    //Change background color
+
        msgBox.setStyleSheet(QString::fromUtf8("background-color: rgb(241, 241, 241);"));
 
             msgBox.show();
@@ -594,6 +670,7 @@ QMessageBox::StandardButton reply;
 
     int numm = ui->lineEdit_numplaceasupprimer->text().toInt();
         bool test=tmpplace.supprimer(numm);
+
         if(reply==QMessageBox::Yes)
        { if(test)
         { ui->tableView->setModel(tmpplace.afficher());
@@ -732,7 +809,21 @@ void parking::on_ok_clicked()
                ui->label_39->setVisible(true);
       ui->label_30->setVisible(true);
 /***************combobox_2 dans place***************************/
+/*Place p5;
+QString  n=ui->comboBox->currentText();
+p5.placearduinocombobo(n);
 
+      ui->label_24->setText(p5.k);
+        ui->label_29->setText(p5.l);
+
+       ui->label_28->setText(p5.m);
+
+        ui->label_41->setText(p5.n);
+
+   ui->label_40->setText(p5.o);
+
+
+         ui->label_39->setText(p5.p);*/
 
   QSqlQuery qry4;
   qry4.prepare("select * from place where numero = '"+ui->comboBox->currentText()+"'");
@@ -752,7 +843,7 @@ void parking::on_ok_clicked()
 
 
                     n+= qry3.value(1).toInt();
-                   i+=qry4.value(1).toInt();
+                   i+=qry3.value(1).toInt();
 
                    if(i==0)
                        ui->label_24->setText(qry4.value(0).toString());
@@ -781,7 +872,7 @@ void parking::on_ok_clicked()
 
 i++;
 
-                   qDebug()<<"fgh";
+                  qDebug()<<"fgh";
                    if(qry3.exec())
                    {
                        while(qry3.next())
@@ -799,19 +890,19 @@ i++;
                    }
 
 
-               }
-               qDebug()<<"fgh";
-           }
+
+
+
  /*************************************************************************/
 
 
 
 
 
-
+               }
 
 }
-
+}
 void parking::on_confirmer_clicked()
 {  sound4->play();
    /* QSqlQuery qry;
@@ -834,7 +925,7 @@ void parking::on_confirmer_clicked()
     QString placechoisi = "La Place Choisi Est : ";
    QString p = placechoisi+place;
      notifyIcon=new QSystemTrayIcon(this);
-     notifyIcon->setIcon(QIcon("C:/photoparking/module.png"));
+     notifyIcon->setIcon(QIcon("C:/Users/abdel/Desktop/affiche 1.png"));
      notifyIcon->show();
      QString titre=ui->comboBox_2->currentText();
      notifyIcon->showMessage(z,p);
@@ -842,7 +933,7 @@ void parking::on_confirmer_clicked()
      int etat= 1;
        Place p2(Numero,etat);
        ui->tableView->setModel(tmpplace.afficher());*/
-       A.write_to_arduino("v");
+     //  A.write_to_arduino("v");
 
 }
 
@@ -876,7 +967,7 @@ void parking::on_test_clicked()
 {
 
 
-    QString a=A.read_from_arduino();
+   /* QString a=A.read_from_arduino();
     qDebug()  <<"ARDUINO :"<< a;
 
     if(a=="1\r\n")
@@ -887,13 +978,16 @@ void parking::on_test_clicked()
     {
      ui->label_32->setText("0");
     }
-
+*/
 }
 
 void parking::on_test2_clicked()
 {
-     int etat,i=1;
-
+   /* QSqlQuery qry;
+    qry.prepare("UPDATE PLACE SET etat=1 where nump=100");
+    qry.exec();
+    int etat,i=1;
+ ui->tableView->setModel(tmpplace.afficher());
     QString a=A.read_from_arduino();
 
     qDebug()  <<"ARDUINO :"<< a;
@@ -908,14 +1002,16 @@ void parking::on_test2_clicked()
     }
        else if(a=="0\r\n")
       {  etat=0;
-         Place p(100,0);
 
-         p.modifierplace(5);
+           QSqlQuery qry;
+           qry.prepare("UPDATE PLACE SET etat=0 where nump=100");
+           qry.exec();
+            Place  p(100,0);
+
+           p.modifierplace(100);
 
       }
-       //Place p(1,etat);
-    qDebug () <<"hhh:"<<etat;
-
+*/
 }
 
 void parking::on_label_choisirclientadmin_linkActivated(const QString &link)
@@ -966,28 +1062,18 @@ ui->lineEdit->setVisible(true);
       ui->label_40->setVisible(true);
 
 
-      /****************labeelnumero****************************/
-      QSqlQuery qry5;
-      qry5.prepare("select * from place where numero = 6");
+      /****************labeelnumero6:100 et 101****************************/
+      Place p;
+    QString a=p.k;
+    QString b=p.l;
+    p.placearduino6();
 
-      if(qry5.exec())
-      {
-          int i = 0;
-          while(qry5.next())
-          {
+ ui->label_29->setText(p.k);
+  ui->label_40->setText(p.l);
+  qDebug()<<b;
 
-              if(i == 0)
-                  ui->label_29->setText(qry5.value(0).toString());
-              if(i == 1)
-                  ui->label_40->setText(qry5.value(0).toString());
-
-
-              i++;
-          }
-          qDebug()<<"fgh";
-      }
 /**************************************************************/
-      int p;
+
       QSqlQuery qry2;
       qry2.prepare("select NUMERO from ZONE where NUMERO='"+ui->comboBox_3->currentText()+"'");
       QString numero;
@@ -996,7 +1082,7 @@ ui->lineEdit->setVisible(true);
 
            while(qry2.next())
            {
-               p = 0;
+             int  p = 0;
                numero =qry2.value(0).toString();
 
                QSqlQuery qry3;
@@ -1015,9 +1101,9 @@ ui->lineEdit->setVisible(true);
 
 
 
-                       qDebug()<<QString::number(p);
+                    //   qDebug()<<QString::number(p);
                    }
-                   qDebug()<<"fgh";
+                  // qDebug()<<"fgh";
 
                }
 
@@ -1058,7 +1144,7 @@ void parking::on_confirmera_clicked()
         QString placechoisi = "La Place Choisi Est : ";
        QString p = placechoisi+place;
          notifyIcon=new QSystemTrayIcon(this);
-         notifyIcon->setIcon(QIcon("C:/photoparking/module.png"));
+         notifyIcon->setIcon(QIcon("C:Users/abdel/Desktop/affiche 1.png"));
          notifyIcon->show();
          QString titre=ui->comboBox_2->currentText();
          notifyIcon->showMessage(z,p);
@@ -1074,4 +1160,11 @@ void parking::on_confirmera_clicked()
 void parking::on_comboBox_activated(const QString &arg1)
 {
 
+}
+
+void parking::on_pushButton_37_clicked()
+{
+    hide();
+    smarket *sm=new smarket;
+    sm->show();
 }

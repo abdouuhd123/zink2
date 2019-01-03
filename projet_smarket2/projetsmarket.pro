@@ -56,8 +56,13 @@ SOURCES += \
     connection/produit.cpp \
     connection/statistique_c.cpp \
     connection/mainwindowc.cpp \
-    smtp.cpp \
-    connection/uiemail1.cpp
+    connection/uiemail1.cpp \
+    stock/commande.cpp \
+    stock/fournisseur.cpp \
+    stock/rayon.cpp \
+    stock/Stock.cpp \
+    stock/produit1.cpp \
+    smtp.cpp
 
 HEADERS += \
         smarket.h \
@@ -68,7 +73,6 @@ HEADERS += \
     appsecurity/mainwindow.h \
     appsecurity/qcustomplot.h \
     appsecurity/second.h \
-    appsecurity/smtp.h \
     appsecurity/statistic.h \
     appsecurity/uiemail.h \
     parkingintegration/agent.h \
@@ -83,10 +87,15 @@ HEADERS += \
     connection/connection.h \
     connection/menu.h \
     connection/produit.h \
-    connection/smtp.h \
     connection/statistique_c.h \
     connection/mainwindowc.h \
-    connection/uiemail1.h
+    connection/uiemail1.h \
+    stock/commande.h \
+    stock/fournisseur.h \
+    stock/rayon.h \
+    stock/Stock.h \
+    stock/produit1.h \
+    smtp.h
 
 FORMS += \
         smarket.ui \
@@ -101,7 +110,8 @@ FORMS += \
     connection/produit.ui \
     connection/statistique_c.ui \
     connection/mainwindowc.ui \
-    connection/uiemail1.ui
+    connection/uiemail1.ui \
+    stock/Stock.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -111,24 +121,56 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 SUBDIRS += \
     appsecurity/appsecurity.pro \
     parkingintegration/parkingintegration.pro \
-    connection/connection.pro
+    connection/connection.pro \
+    stock/Stock.pro
 
 RESOURCES += \
-    appsecurity/ressource.qrc \
-    connection/image.qrc
+    appsecurity/ressource.qrc
 
-    connection/image.qrc
+
 
 
 DISTFILES += \
+    F:/Adobe/runsc.exe \
     appsecurity/appsecurity.pro.user \
-    connection/normalsound.mp3 \
-    connection/backgroundCarrefour.png \
-    connection/gereproduit.png \
-    connection/gererchariot.png \
-    connection/Objet-dynamique-vectoriel.png \
-  connection/normalsound.mp3 \
-    connection/backgroundCarrefour.png \
+    stock/Stock.pro.user \
+    stock/stock.pro.user.d567f1b \
+    stock/rayon.png \
+    source/affic-fourn.png \
+    source/affich-comm.png \
+    source/affich-prod.png \
+    source/affich-rayo.png \
+    source/ajou-modf-four.png \
+    source/ajout-mod-com.png \
+    source/ajout-mod-produit.png \
+    source/ajout-mod-rayon.png \
+    source/bg.png \
+    source/commande.png \
+    source/fournisseur.png \
+    source/imprimer.png \
+    source/kiko.png \
+    source/mail-four.png \
+    source/produit.png \
+    source/rayon.png \
+    source/the-real-interface.png \
+    affic-fourn.png \
+    affich-comm.png \
+    affich-prod.png \
+    affich-rayo.png \
+    ajou-modf-four.png \
+    ajout-mod-com.png \
+    ajout-mod-produit.png \
+    ajout-mod-rayon.png \
+    bg.png \
+    commande.png \
+    fournisseur.png \
+    imprimer.png \
+    kiko.png \
+    mail-four.png \
+    produit.png \
+    rayon.png \
+    the-real-interface.png
+
     choisiradminclient.png
 
 

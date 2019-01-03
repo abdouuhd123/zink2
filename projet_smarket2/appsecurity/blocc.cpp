@@ -25,16 +25,11 @@ QSqlQuery query;
 QString res= QString::number(id);
 query.prepare("insert into BLOC (ID, TYPE, ETAT) "
                     "VALUES (:id, :type, :etat)");
-query.bindValue(":id", res);
-query.bindValue(":type", type);
-query.bindValue("etat", etat);
+query.bindValue(":id", get_id());
+query.bindValue(":type", get_type());
+query.bindValue(":etat", get_etat());
 
-/* QSqlQuery q;
-    QString c = QString::number(get_id());
-    q.prepare("insert into EMPLOYEE (id_emp,nom,prenom) VALUES (?,?,?)");
-    q.addBindValue(c);
-    q.addBindValue(get_nom());
-    q.addBindValue(get_prenom());*/
+
 
 
 
@@ -73,13 +68,7 @@ QSqlQueryModel* blocc::rechercher_bloc(QString idd)
 void blocc::modifier_bloc(QString c)
 {
     QSqlQuery q;
-    //q.prepare("update BLOC (ID, TYPE, ETAT) where ID=:id"
-      //        "VALUES (:id, :type, :etat)");
     q.prepare("update BLOC set TYPE=(?),ETAT=(?) where ID=(?)");
-     //c = QString::number(get_id());
-        //q.addBindValue(c);
-    //q.bindValue(":type",get_type());
-    //q.bindValue(":etat",get_etat());
         q.addBindValue(get_type());
         q.addBindValue(get_etat());
     q.addBindValue(c);
@@ -88,34 +77,39 @@ void blocc::modifier_bloc(QString c)
     q.exec();
 
 
-   /* QString c = QString::number(get_CIN());
-    q.addBindValue(get_Mail());
-    q.addBindValue(get_MDP());
-    q.addBindValue(get_Nom());
-    q.addBindValue(get_Prenom());
-    q.addBindValue(get_DateN());
-    q.addBindValue(get_Nationalite());
-    q.addBindValue(c);*/
 
-
-    //QString res= QString::number(id);
-    //q.prepare("insert into BLOC (ID, TYPE, ETAT) "
-                        //"VALUES (:id, :type, :etat)");
-    //query.bindValue(":id", res);
-    //q.bindValue(":type", type);
-   // q.bindValue("etat", etat);
 }
 QSqlQueryModel* blocc::rechercherad_bloc(QString s)
 {
-QSqlQueryModel *model=new QSqlQueryModel();
-QSqlQuery q;
+    QSqlQueryModel *model=new QSqlQueryModel();
+    QSqlQuery q;
+    QString s1=s;
+    QString s2=s;
 
-q.prepare("select * from BLOC where ID like ?");
-q.addBindValue("%"+s+"%");
+    q.prepare("select * from BLOC where ID like ? or TYPE like ? or ETAT like ?");
+
+    q.addBindValue("%"+s+"%");
+    q.addBindValue("%"+s1+"%");
+    q.addBindValue("%"+s2+"%");
 
 
 
-q.exec();
-model->setQuery(q);
-return (model);
+
+    q.exec();
+    model->setQuery(q);
+    return (model);
+}
+void blocc::modifier1_bloc(QString c)
+{
+    QSqlQuery q;
+    q.prepare("update BLOC set ETAT=(?) where ID=(?)");
+    q.addBindValue(get_etat());
+    q.addBindValue(c);
+
+
+    q.exec();
+
+
+
+
 }

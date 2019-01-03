@@ -57,6 +57,10 @@ private slots:
 
    // void on_beya_cursorPositionChanged(int arg1, int arg2);
 
+    void on_ng_clicked();
+
+    void on_pushButton_37_clicked();
+
 private:
     Ui::chariot *ui;
     classe_chariot c;

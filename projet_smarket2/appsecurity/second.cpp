@@ -13,9 +13,16 @@
 #include "accidentc.h"
 #include <QDialog>
 #include "connexion.h"
+#include "parkingintegration/arduino.h"
+#include "QPixmap"
+#include "QMessageBox"
+#include "QPixmap"
+#include <QtMultimedia/QMediaPlayer>
+#include <QPixmap>
+#include <QSystemTrayIcon>
 
-
-
+#include <QGraphicsEffect>
+#include <QPropertyAnimation>
 #include <QtSql>
 #include<QMap>
 #include <iostream>
@@ -40,6 +47,11 @@ second::second(QWidget *parent) :
     ui->setupUi(this);
     ui->stackedWidget->setCurrentIndex(0);
 
+    /*QPixmap  mypix("qrc:/interface/mouvement.png");
+    int w=ui->label_5->width();
+    int h=ui->label_5->height();
+    ui->label_5->setPixmap(mypix.scaled(w,h,Qt::KeepAspectRatio));
+*/
     ui->but_mouvement->setFixedHeight(140);
     ui->but_mouvement->setFixedWidth(140);
     ui->but_theft->setFixedHeight(140);
@@ -173,11 +185,45 @@ second::second(QWidget *parent) :
     ui->pushButton_2->hide();*/
 
 
-
+ui->label_20->hide();
     ui->stackedWidget->setCurrentIndex(0);
 
+int ret=A.connect_arduino();
+switch(ret){
+case(0):qDebug()<<"arduino is available and connected to : "<<A.getarduino_port_name();
+    break;
+case(1):qDebug()<<"arduino is available but not connected to : "<<A.getarduino_port_name();
+    break;
+case(-1):qDebug()<<"arduino is not available";
+    break;
+}
+
+ QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label()));
+
+              /*QTimer *timer = new QTimer(this);
+              connect(timer, SIGNAL(timeout()), this, SLOT(capteur()));
+                 timer->start(1000);*/
 
 }
+
+/*void second::capteur(){
+    QByteArray data=A.read_from_arduino();
+
+
+
+      if(data=="1")
+      {qDebug()<<"someone is STEAAALINGGG";
+          QPixmap pix("C:/Users/abdel/Documents/appsecurity/interface/mouvement1.png");
+
+            ui->label_5->setPixmap(pix);
+      }
+      else if(data=="0")
+      {qDebug()<<"someone is noooooooot STEAAALINGGG";
+          QPixmap pix1("C:/Users/abdel/Documents/appsecurity/interface/mouvement.png");
+
+            ui->label_5->setPixmap(pix1);
+      }
+}*/
 
 second::~second()
 {
@@ -274,12 +320,15 @@ void second::on_pushButton_11_clicked()
 
 void second::on_pushButton_9_clicked()
 {
-        alarm->stop();
+    //    alarm->stop();
+A.write_to_arduino("4");
 }
 
 void second::on_pushButton_8_clicked()
 {
-        alarm->play();
+        //alarm->play();
+A.write_to_arduino("2");
+
 }
 
 void second::on_but_mouvement_clicked()
@@ -411,7 +460,7 @@ void second::on_pushButton_27_clicked()
            QString s=ui->lineEdit_8->text();
            ui->lineEdit_8->clear();
             QSqlQueryModel *model=new  QSqlQueryModel();
-            model=e.rechercherad_employee(s);
+            model=e.rechercher_employee(s);
             ui->tabemployee->setModel(model);
             ui->tabemployee->show();
             ui->lineEdit_8->clear();
@@ -602,7 +651,7 @@ void second::on_pushButton_15_clicked()
        QString s=ui->lineEdit->text();
        ui->lineEdit->clear();
         QSqlQueryModel *model=new  QSqlQueryModel();
-        model=ac.rechercherad_accident(s);
+        model=ac.rechercher_accident(s);
         ui->tabaccident->setModel(model);
         ui->tabaccident->show();
         ui->lineEdit->clear();
@@ -705,7 +754,7 @@ void second::on_pushButton_20_clicked()
            QString s=ui->lineEdit_5->text();
            ui->lineEdit_5->clear();
             QSqlQueryModel *model=new  QSqlQueryModel();
-            model=b.rechercherad_bloc(s);
+            model=b.rechercher_bloc(s);
             ui->tabbloc->setModel(model);
             ui->tabbloc->show();
 }
@@ -739,14 +788,15 @@ void second::on_pushButton_21_clicked()
             sound->setPosition(0);
             else if (sound->state()==QMediaPlayer::StoppedState)
                 sound->play();
-        int id = ui->lineEdit_5->text().toInt();
-        QString type= ui->lineEdit_6->text();
-        QString etat= ui->lineEdit_4->text();
+    blocc b;
+
+        b.set_id(ui->lineEdit_5->text().toInt());
+        b.set_type(ui->lineEdit_6->text());
+        b.set_etat(ui->lineEdit_4->text());
         ui->lineEdit_5->clear();
         ui->lineEdit_6->clear();
         ui->lineEdit_4->clear();
 
-      blocc b(id,type,etat);
       bool test=b.ajouter_bloc();
       if(test)
     {ui->tabbloc->setModel(b.afficher_bloc());//refresh
@@ -812,9 +862,8 @@ void second::on_pushButton_35_clicked()
    statistic *st= new statistic;
    st->show();*/
     QLinearGradient gradient(0, 0, 0, 400);
-    gradient.setColorAt(0, QColor(90, 90, 90));
-    gradient.setColorAt(0.38, QColor(105, 105, 105));
-    gradient.setColorAt(1, QColor(70, 70, 70));
+    gradient.setColorAt(0.38, QColor(32, 34, 40));
+    gradient.setColorAt(0, QColor(41, 44, 51));
     ui->widget->setBackground(QBrush(gradient));
 
     // create empty bar chart objects:
@@ -826,8 +875,8 @@ void second::on_pushButton_35_clicked()
     // set names and colors:
 
     regen->setName("accidents number");
-    regen->setPen(QPen(QColor(0, 168, 140).lighter(180)));
-    regen->setBrush(QColor(0, 168, 140));
+    regen->setPen(QPen(QColor(4, 44, 88).lighter(180)));
+    regen->setBrush(QColor(4, 44, 88));
 
 
 
@@ -860,25 +909,25 @@ q.prepare("select TYPE ,count(ID)as somme from ACCIDENT group by TYPE ");
     ui->widget->xAxis->setRange(0, 4);
     ui->widget->xAxis->setLabel("type of accident");
 
-    ui->widget->xAxis->setBasePen(QPen(Qt::white));
-    ui->widget->xAxis->setTickPen(QPen(Qt::white));
+    ui->widget->xAxis->setBasePen(QPen(QColor(213, 213, 229)));
+    ui->widget->xAxis->setTickPen(QPen(QColor(213, 213, 229)));
     ui->widget->xAxis->grid()->setVisible(true);
-    ui->widget->xAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
-    ui->widget->xAxis->setTickLabelColor(Qt::white);
-    ui->widget->xAxis->setLabelColor(Qt::white);
+    ui->widget->xAxis->grid()->setPen(QPen(QColor(41, 44, 51), 0, Qt::SolidLine));
+    ui->widget->xAxis->setTickLabelColor(QColor(213, 213, 229));
+    ui->widget->xAxis->setLabelColor(QColor(213, 213, 229));
 
     // prepare y axis:
     ui->widget->yAxis->setRange(0,10);
     ui->widget->yAxis->setPadding(5); // a bit more space to the left border
-    ui->widget->yAxis->setLabel("number");
-    ui->widget->yAxis->setBasePen(QPen(Qt::white));
-    ui->widget->yAxis->setTickPen(QPen(Qt::white));
-    ui->widget->yAxis->setSubTickPen(QPen(Qt::white));
+    ui->widget->yAxis->setLabel("number of accidents");
+    ui->widget->yAxis->setBasePen(QPen(QColor(213, 213, 229)));
+    ui->widget->yAxis->setTickPen(QPen(QColor(213, 213, 229)));
+    ui->widget->yAxis->setSubTickPen(QColor(213, 213, 229));
     ui->widget->yAxis->grid()->setSubGridVisible(true);
-    ui->widget->yAxis->setTickLabelColor(Qt::white);
-    ui->widget->yAxis->setLabelColor(Qt::white);
-    ui->widget->yAxis->grid()->setPen(QPen(QColor(130, 130, 130), 0, Qt::SolidLine));
-    ui->widget->yAxis->grid()->setSubGridPen(QPen(QColor(130, 130, 130), 0, Qt::DotLine));
+    ui->widget->yAxis->setTickLabelColor(QColor(213, 213, 229));
+    ui->widget->yAxis->setLabelColor(QColor(213, 213, 229));
+    ui->widget->yAxis->grid()->setPen(QPen(QColor(41, 44, 51), 0, Qt::SolidLine));
+    ui->widget->yAxis->grid()->setSubGridPen(QPen(QColor(41, 44, 51), 0, Qt::SolidLine));
 
     // Add data:
 
@@ -889,7 +938,7 @@ q.prepare("select TYPE ,count(ID)as somme from ACCIDENT group by TYPE ");
     ui->widget->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignTop|Qt::AlignHCenter);
     ui->widget->legend->setBrush(QColor(255, 255, 255, 100));
     ui->widget->legend->setBorderPen(Qt::NoPen);
-    QFont legendFont = font();
+    QFont legendFont("lato", 10, QFont::Bold);;
     legendFont.setPointSize(10);
     ui->widget->legend->setFont(legendFont);
     ui->widget->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom);
@@ -934,6 +983,94 @@ void second::on_lineEdit_textEdited(QString s)
         QSqlQueryModel *model=new  QSqlQueryModel();
         model=ac.rechercherad_accident(s);
         ui->tabaccident->setModel(model);
-        ui->tabaccident->show();
+       // ui->tabaccident->show();
         //ui->lineEdit->clear();
+}
+void second::update_label()
+{ //QByteArray data;
+    data=A.read_from_arduino();
+blocc b;
+    if(data=="1")
+    {        QPixmap p(40,40);
+        p.load ("C:/Users/abdel/Documents/appsecurity/interface/mouvement1.png");
+
+        QIcon icon(p);
+        QSystemTrayIcon n(icon);
+        n.setVisible(true);
+        n.showMessage("mouvement detected","someone is stealing",icon,3000);
+        qDebug()<<"someone is STEAAALINGGG";
+
+        ui->label_20->show();
+
+        //QString s = "mouvement";
+        b.set_etat("theft");
+       // b.set_type("ahhaah");
+        b.modifier1_bloc("123");
+        ui->tabbloc->setModel(b.afficher_bloc());
+
+
+
+    }
+    else if (data=="0")
+    {qDebug()<<"someone is noooooooot STEAAALINGGG";
+
+        ui->label_20->hide();
+
+        /*QPixmap pix1("C:/Users/abdel/Documents/appsecurity/interface/mouvement.png");
+
+          ui->label_5->setPixmap(pix1);*/
+          /*QPixmap p1(32,32);
+                 p1.load ("C:/Users/abdel/Documents/appsecurity/interface/mouvement.png");
+
+                 QIcon icon(p1);
+                 QSystemTrayIcon n1(icon);
+                 n1.setVisible(true);
+                 n1.showMessage("all clear","no one is stealing",icon,3000);*/
+    }
+}
+
+void second::on_lineEdit_8_textEdited( QString s)
+{
+    if(sound->state()==QMediaPlayer::PlayingState)
+            sound->setPosition(0);
+            else if (sound->state()==QMediaPlayer::StoppedState)
+                sound->play();
+        employeec e;
+       s=ui->lineEdit_8->text();
+       //ui->lineEdit->clear();
+        QSqlQueryModel *model=new  QSqlQueryModel();
+        model=e.rechercherad_employee(s);
+        ui->tabemployee->setModel(model);
+       // ui->tabemployee->show();
+        //ui->lineEdit->clear();
+}
+
+void second::on_lineEdit_5_textEdited( QString s)
+{
+    if(sound->state()==QMediaPlayer::PlayingState)
+            sound->setPosition(0);
+            else if (sound->state()==QMediaPlayer::StoppedState)
+                sound->play();
+        blocc b;
+       s=ui->lineEdit_5->text();
+       //ui->lineEdit->clear();
+        QSqlQueryModel *model=new  QSqlQueryModel();
+        model=b.rechercherad_bloc(s);
+        ui->tabbloc->setModel(model);
+       // ui->tabbloc->show();
+        //ui->lineEdit->clear();
+}
+
+
+
+
+void second::on_pushButton_37_clicked()
+{
+    if(sound->state()==QMediaPlayer::PlayingState)
+            sound->setPosition(0);
+            else if (sound->state()==QMediaPlayer::StoppedState)
+                sound->play();
+    hide();
+    smarket *sm=new smarket;
+    sm->show();
 }

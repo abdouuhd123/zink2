@@ -16,14 +16,15 @@
   <widget class="QLabel" name="recipantL">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>310</y>
+     <x>400</x>
+     <y>320</y>
      <width>131</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    <string notr="true">font: 87 20pt &quot;Lato Black&quot;;
+	color: rgb(213, 213, 229);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;MAIL RECIPANT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -32,10 +33,10 @@
   <widget class="QLineEdit" name="file">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>400</y>
+     <x>590</x>
+     <y>460</y>
      <width>301</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -43,7 +44,7 @@
 color: rgb(255, 255, 255);*/
 QLineEdit { 
 font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
-background-color:rgb(3, 38, 77);
+background-color:rgb(179, 179, 193);
 border-style: outset;
 	color: rgb(0, 0, 0);
 border-radius: 10px;
@@ -52,13 +53,16 @@ min-width: 10em;
 padding: 6px;
 }
 QLineEdit:hover:!pressed {
-background-color:rgb(179, 179, 193);
+background-color:rgb(213, 213, 229);
 border-style: inset;
+background-color:rgb(213, 213, 229);
+background-color:rgb(213, 213, 229);
 }
-/*QLineEdit:pressed {
+/*QLineEdit:selected {
 background-color:rgb(179, 179, 193);
 border-style: inset;
-}*/</string>
+}*/
+</string>
    </property>
    <property name="text">
     <string/>
@@ -73,10 +77,10 @@ border-style: inset;
   <widget class="QLineEdit" name="rcpt">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>300</y>
+     <x>590</x>
+     <y>320</y>
      <width>395</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -84,7 +88,7 @@ border-style: inset;
 color: rgb(255, 255, 255);*/
 QLineEdit { 
 font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
-background-color:rgb(3, 38, 77);
+background-color:rgb(179, 179, 193);
 border-style: outset;
 	color: rgb(0, 0, 0);
 border-radius: 10px;
@@ -93,13 +97,16 @@ min-width: 10em;
 padding: 6px;
 }
 QLineEdit:hover:!pressed {
-background-color:rgb(179, 179, 193);
+background-color:rgb(213, 213, 229);
 border-style: inset;
+background-color:rgb(213, 213, 229);
+background-color:rgb(213, 213, 229);
 }
-/*QLineEdit:pressed {
+/*QLineEdit:selected {
 background-color:rgb(179, 179, 193);
 border-style: inset;
-}*/</string>
+}*/
+</string>
    </property>
    <property name="text">
     <string/>
@@ -108,8 +115,8 @@ border-style: inset;
   <widget class="QPushButton" name="browseBtn">
    <property name="geometry">
     <rect>
-     <x>790</x>
-     <y>400</y>
+     <x>910</x>
+     <y>460</y>
      <width>61</width>
      <height>51</height>
     </rect>
@@ -124,14 +131,15 @@ border-style: inset;
   <widget class="QLabel" name="messageL">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>490</y>
+     <x>400</x>
+     <y>530</y>
      <width>81</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    <string notr="true">font: 87 20pt &quot;Lato Black&quot;;
+	color: rgb(213, 213, 229);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;MESSAGE&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -140,10 +148,10 @@ border-style: inset;
   <widget class="QLineEdit" name="port">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>140</y>
+     <x>590</x>
+     <y>110</y>
      <width>395</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -151,7 +159,7 @@ border-style: inset;
 color: rgb(255, 255, 255);*/
 QLineEdit { 
 font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
-background-color:rgb(3, 38, 77);
+background-color:rgb(179, 179, 193);
 border-style: outset;
 	color: rgb(0, 0, 0);
 border-radius: 10px;
@@ -160,13 +168,16 @@ min-width: 10em;
 padding: 6px;
 }
 QLineEdit:hover:!pressed {
-background-color:rgb(179, 179, 193);
+background-color:rgb(213, 213, 229);
 border-style: inset;
+background-color:rgb(213, 213, 229);
+background-color:rgb(213, 213, 229);
 }
-/*QLineEdit:pressed {
+/*QLineEdit:selected {
 background-color:rgb(179, 179, 193);
 border-style: inset;
-}*/</string>
+}*/
+</string>
    </property>
    <property name="text">
     <string>465</string>
@@ -178,10 +189,10 @@ border-style: inset;
   <widget class="QPushButton" name="sendPB">
    <property name="geometry">
     <rect>
-     <x>900</x>
-     <y>600</y>
-     <width>101</width>
-     <height>81</height>
+     <x>1010</x>
+     <y>710</y>
+     <width>71</width>
+     <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -198,14 +209,15 @@ border-style: inset;
   <widget class="QLabel" name="smtpserverL">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>90</y>
-     <width>111</width>
-     <height>20</height>
+     <x>400</x>
+     <y>50</y>
+     <width>121</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    <string notr="true">font: 87 20pt &quot;Lato Black&quot;;
+	color: rgb(213, 213, 229);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;SERVER-SMTP&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -214,14 +226,15 @@ border-style: inset;
   <widget class="QLabel" name="attachmentL">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>410</y>
-     <width>121</width>
-     <height>21</height>
+     <x>400</x>
+     <y>460</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    <string notr="true">font: 87 20pt &quot;Lato Black&quot;;
+	color: rgb(213, 213, 229);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;ATTACHEMENT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -230,14 +243,15 @@ border-style: inset;
   <widget class="QLabel" name="serverportL">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>150</y>
-     <width>111</width>
-     <height>20</height>
+     <x>400</x>
+     <y>110</y>
+     <width>121</width>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    <string notr="true">font: 87 20pt &quot;Lato Black&quot;;
+	color: rgb(213, 213, 229);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;SERVER-PORT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -246,14 +260,15 @@ border-style: inset;
   <widget class="QLabel" name="usernameL">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>200</y>
+     <x>400</x>
+     <y>180</y>
      <width>71</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    <string notr="true">font: 87 20pt &quot;Lato Black&quot;;
+	color: rgb(213, 213, 229);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;MAIL&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -262,14 +277,15 @@ border-style: inset;
   <widget class="QLabel" name="subjectL">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>360</y>
+     <x>400</x>
+     <y>390</y>
      <width>71</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    <string notr="true">font: 87 20pt &quot;Lato Black&quot;;
+	color: rgb(213, 213, 229);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;SUBJECT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -278,14 +294,15 @@ border-style: inset;
   <widget class="QLabel" name="passwordL">
    <property name="geometry">
     <rect>
-     <x>330</x>
+     <x>400</x>
      <y>250</y>
-     <width>91</width>
-     <height>21</height>
+     <width>101</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;</string>
+    <string notr="true">font: 87 20pt &quot;Lato Black&quot;;
+	color: rgb(213, 213, 229);</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:10pt; color:#ffffff;&quot;&gt;PASSWORD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -294,10 +311,10 @@ border-style: inset;
   <widget class="QLineEdit" name="server">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>90</y>
+     <x>590</x>
+     <y>40</y>
      <width>395</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -305,7 +322,7 @@ border-style: inset;
 color: rgb(255, 255, 255);*/
 QLineEdit { 
 font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
-background-color:rgb(3, 38, 77);
+background-color:rgb(179, 179, 193);
 border-style: outset;
 	color: rgb(0, 0, 0);
 border-radius: 10px;
@@ -314,13 +331,16 @@ min-width: 10em;
 padding: 6px;
 }
 QLineEdit:hover:!pressed {
-background-color:rgb(179, 179, 193);
+background-color:rgb(213, 213, 229);
 border-style: inset;
+background-color:rgb(213, 213, 229);
+background-color:rgb(213, 213, 229);
 }
-/*QLineEdit:pressed {
+/*QLineEdit:selected {
 background-color:rgb(179, 179, 193);
 border-style: inset;
-}*/</string>
+}*/
+</string>
    </property>
    <property name="text">
     <string>smtp.gmail.com</string>
@@ -332,24 +352,25 @@ border-style: inset;
   <widget class="QPlainTextEdit" name="msg">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>500</y>
+     <x>590</x>
+     <y>530</y>
      <width>401</width>
      <height>181</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: transparent;
+	color: rgb(213, 213, 229);
 </string>
    </property>
   </widget>
   <widget class="QLineEdit" name="uname">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>190</y>
+     <x>590</x>
+     <y>180</y>
      <width>391</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -357,7 +378,7 @@ border-style: inset;
 color: rgb(255, 255, 255);*/
 QLineEdit { 
 font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
-background-color:rgb(3, 38, 77);
+background-color:rgb(179, 179, 193);
 border-style: outset;
 	color: rgb(0, 0, 0);
 border-radius: 10px;
@@ -366,22 +387,25 @@ min-width: 10em;
 padding: 6px;
 }
 QLineEdit:hover:!pressed {
-background-color:rgb(179, 179, 193);
+background-color:rgb(213, 213, 229);
 border-style: inset;
+background-color:rgb(213, 213, 229);
+background-color:rgb(213, 213, 229);
 }
-/*QLineEdit:pressed {
+/*QLineEdit:selected {
 background-color:rgb(179, 179, 193);
 border-style: inset;
-}*/</string>
+}*/
+</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="paswd">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>590</x>
      <y>250</y>
      <width>391</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -389,7 +413,7 @@ border-style: inset;
 color: rgb(255, 255, 255);*/
 QLineEdit { 
 font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
-background-color:rgb(3, 38, 77);
+background-color:rgb(179, 179, 193);
 border-style: outset;
 	color: rgb(0, 0, 0);
 border-radius: 10px;
@@ -398,13 +422,16 @@ min-width: 10em;
 padding: 6px;
 }
 QLineEdit:hover:!pressed {
-background-color:rgb(179, 179, 193);
+background-color:rgb(213, 213, 229);
 border-style: inset;
+background-color:rgb(213, 213, 229);
+background-color:rgb(213, 213, 229);
 }
-/*QLineEdit:pressed {
+/*QLineEdit:selected {
 background-color:rgb(179, 179, 193);
 border-style: inset;
-}*/</string>
+}*/
+</string>
    </property>
    <property name="echoMode">
     <enum>QLineEdit::Password</enum>
@@ -429,10 +456,10 @@ border-style: inset;
   <widget class="QLineEdit" name="subject">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>350</y>
+     <x>590</x>
+     <y>390</y>
      <width>391</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -440,7 +467,7 @@ border-style: inset;
 color: rgb(255, 255, 255);*/
 QLineEdit { 
 font: 63 8pt &quot;Yu Gothic UI Semibold&quot;;
-background-color:rgb(3, 38, 77);
+background-color:rgb(179, 179, 193);
 border-style: outset;
 	color: rgb(0, 0, 0);
 border-radius: 10px;
@@ -449,19 +476,22 @@ min-width: 10em;
 padding: 6px;
 }
 QLineEdit:hover:!pressed {
-background-color:rgb(179, 179, 193);
+background-color:rgb(213, 213, 229);
 border-style: inset;
+background-color:rgb(213, 213, 229);
+background-color:rgb(213, 213, 229);
 }
-/*QLineEdit:pressed {
+/*QLineEdit:selected {
 background-color:rgb(179, 179, 193);
 border-style: inset;
-}*/</string>
+}*/
+</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_16">
    <property name="geometry">
     <rect>
-     <x>1100</x>
+     <x>300</x>
      <y>720</y>
      <width>58</width>
      <height>58</height>
@@ -477,7 +507,7 @@ border-style: inset;
   <widget class="QPushButton" name="pushButton_34">
    <property name="geometry">
     <rect>
-     <x>1000</x>
+     <x>210</x>
      <y>720</y>
      <width>68</width>
      <height>58</height>

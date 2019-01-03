@@ -83,7 +83,7 @@ void mainwindowc::on_pushButton_clicked()
 
                     else
                     {
-                        QMessageBox::information(this,tr("Information"),tr("cannot find"));
+                        QMessageBox::information(this,tr("Information"),tr("you are welcome"));
 
                         this->hide();
                         chariot chariotob;

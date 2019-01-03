@@ -4,6 +4,7 @@
 #include "appsecurity/mainwindow.h"
 #include "parkingintegration/parking.h"
 #include "connection/mainwindowc.h"
+#include "stock/Stock.h"
 smarket::smarket(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::smarket)
@@ -35,4 +36,11 @@ void smarket::on_pushButton_3_clicked()
     this->hide();
     mainwindowc *c= new mainwindowc;
     c->show();
+}
+
+void smarket::on_pushButton_4_clicked()
+{
+    this->hide();
+    Stock *s= new Stock ;
+    s->show();
 }

@@ -5,7 +5,6 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include "second.h"
-
 uiemail::uiemail(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::uiemail)

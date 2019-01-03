@@ -1,6 +1,6 @@
 #include "chariot.h"
 #include "ui_chariot.h"
-
+#include "smarket.h"
 chariot::chariot(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::chariot)
@@ -155,3 +155,15 @@ void chariot::on_pushButton_retour_clicked()
 
 
 
+
+void chariot::on_ng_clicked()
+{
+    close();
+}
+
+void chariot::on_pushButton_37_clicked()
+{
+    hide();
+    smarket *sm=new smarket;
+    sm->show();
+}

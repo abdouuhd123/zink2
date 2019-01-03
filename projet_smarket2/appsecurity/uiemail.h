@@ -1,6 +1,7 @@
 #ifndef UIEMAIL_H
 #define UIEMAIL_H
 #include <QtMultimedia/QMediaPlayer>
+#include "smtp.h"
 
 #include <QDialog>
 

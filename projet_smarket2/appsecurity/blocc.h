@@ -23,6 +23,7 @@ class blocc
     QSqlQueryModel * rechercher_bloc(QString idd);
     void modifier_bloc(QString c);
     QSqlQueryModel * rechercherad_bloc(QString idd);
+    void modifier1_bloc(QString c);
 
 
 private:

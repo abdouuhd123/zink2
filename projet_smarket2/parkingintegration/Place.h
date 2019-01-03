@@ -8,6 +8,14 @@
 class Place
 {
 public:
+    QString k;
+    QString l;
+    QString m;
+    QString n;
+    QString o;
+    QString p;
+
+
     Place();
     Place(int,int);
     int getNump();
@@ -21,8 +29,10 @@ public:
          QSqlQueryModel * placedanslazone(QString);
           QSqlQueryModel * tri_par_numero2();
             void selectionner(int);
-
-
+            QSqlQueryModel *placearduino6();
+            QString nombreplaceinferieurasix();
+ bool  supprimerverifier(int);
+QSqlQueryModel *placearduinocombobo(int no);
 private:
     int num;
     int etat;

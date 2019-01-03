@@ -5,8 +5,9 @@
 #include "blocc.h"
 #include "accidentc.h"
 #include <QDialog>
-
+#include "smarket.h"
 #include "parkingintegration/connexionp.h"
+#include "parkingintegration/arduino.h"
 
 //#include "statistic.h"
 #include "uiemail.h"
@@ -111,6 +112,18 @@ private slots:
     void on_pushButton_36_clicked();
 
     void on_lineEdit_textEdited(QString s);
+    void update_label();
+
+ //void capteur();
+
+    void on_lineEdit_8_textEdited(QString s);
+
+    void on_lineEdit_5_textEdited( QString s);
+
+
+
+
+    void on_pushButton_37_clicked();
 
 private:
     Ui::second *ui;
@@ -122,6 +135,10 @@ private:
     blocc b;
     //statistic st;
     uiemail em;
+    QByteArray data;
+    //QByteArray b1;
+
+    Arduino A;
 };
 
 #endif // SECOND_H

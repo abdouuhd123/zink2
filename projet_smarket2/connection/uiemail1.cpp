@@ -1,10 +1,10 @@
 #include "uiemail1.h"
 #include "ui_uiemail1.h"
-#include "smtp.h"
+//#include "smtp.h"
 #include"produit.h"
 #include <QMessageBox>
 #include <QFileDialog>
-
+#include "smtp.h"
 
 uiemail1::uiemail1(QWidget *parent) :
     QDialog(parent),

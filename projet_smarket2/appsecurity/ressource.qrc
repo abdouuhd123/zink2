@@ -41,9 +41,30 @@
         <file>../choisiradminclient.png</file>
         <file>../1.png</file>
         <file>../2.png</file>
-        <file>../../../../Documents/projetsmarket/6dispo.png</file>
-        <file>../../../../Documents/projetsmarket/voiture.png</file>
-        <file>../../../../Documents/projetsmarket/6dispoo.png</file>
-        <file>../../../../Documents/projetsmarket/voiture2.png</file>
+        <file>../6dispo.png</file>
+        <file>../6dispoo.png</file>
+        <file>../voiture.png</file>
+        <file>../voiture2.png</file>
+        <file>interface/mouvement1.png</file>
+        <file>interface/affic-fourn.png</file>
+        <file>interface/affich-comm.png</file>
+        <file>interface/affich-prod.png</file>
+        <file>interface/affich-rayo.png</file>
+        <file>interface/ajou-modf-four.png</file>
+        <file>interface/ajout-mod-com.png</file>
+        <file>interface/ajout-mod-produit.png</file>
+        <file>interface/ajout-mod-rayon.png</file>
+        <file>interface/bg.png</file>
+        <file>interface/commande.png</file>
+        <file>interface/fournisseur.png</file>
+        <file>interface/imprimer.png</file>
+        <file>interface/kiko.png</file>
+        <file>interface/mail-four.png</file>
+        <file>interface/produit.png</file>
+        <file>interface/rayon.png</file>
+        <file>interface/the-real-interface.png</file>
+        <file>../../../gif4.gif</file>
+        <file>../../../gif5.gif</file>
+        <file>interface/MAINNNNNNNNN.png</file>
     </qresource>
 </RCC>

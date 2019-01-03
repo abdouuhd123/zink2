@@ -2,6 +2,7 @@
 #define UIEMAIL1_H
 
 #include <QDialog>
+#include "smtp.h"
 
 namespace Ui {
 class uiemail1;

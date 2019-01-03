@@ -1,0 +1,13 @@
+INPUT(
+./debug\main.o
+./debug\connexion.o
+./debug\produit.o
+./debug\commande.o
+./debug\rayon.o
+./debug\fournisseur.o
+./debug\smtp.o
+./debug\Stock.o
+./debug\qrc_mainwindow.o
+./debug\moc_smtp.o
+./debug\moc_Stock.o
+);

@@ -72,15 +72,21 @@ QSqlQueryModel* employeec::rechercher_employee(QString idd)
 }
 QSqlQueryModel* employeec::rechercherad_employee(QString s)
 {
-QSqlQueryModel *model=new QSqlQueryModel();
-QSqlQuery q;
+    QSqlQueryModel *model=new QSqlQueryModel();
+    QSqlQuery q;
+    QString s1=s;
+    QString s2=s;
 
-q.prepare("select * from EMPLOYEE where ID like ?");
-q.addBindValue("%"+s+"%");
+    q.prepare("select * from EMPLOYEE where ID like ? or NOM like ? or PRENOM like ?");
+
+    q.addBindValue("%"+s+"%");
+    q.addBindValue("%"+s1+"%");
+    q.addBindValue("%"+s2+"%");
 
 
 
-q.exec();
-model->setQuery(q);
-return (model);
+
+    q.exec();
+    model->setQuery(q);
+    return (model);
 }
